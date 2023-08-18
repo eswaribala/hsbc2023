@@ -1,0 +1,7 @@
+package com.hsbc.tax.models;
+
+public class Product {
+	private int productNo;
+	private int qty;
+
+}

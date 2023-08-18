@@ -1,0 +1,34 @@
+package com.hsbc.tax.utilities;
+
+import java.util.Scanner;
+
+import com.hsbc.tax.models.Gender;
+import com.hsbc.tax.models.Person;
+
+public class IncomeTaxApp {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+     //scanner to read
+	 Scanner scanner=new Scanner(System.in);
+		
+	//create person object
+		Person person=new Person();		
+	//assign values
+		System.out.println("Enter Pan Card No");
+		person.setPanCardNo(scanner.nextLine());
+		System.out.println("Enter Income");
+		person.setIncome(scanner.nextLong());
+		scanner.nextLine();
+		System.out.println("Enter Gender");
+		String gender=scanner.nextLine();
+		person.setGender(Gender.valueOf(gender));
+		System.out.println(person);
+		
+		
+		
+		
+		
+	}
+
+}
