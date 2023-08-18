@@ -1,0 +1,11 @@
+package com.hsbc.tax.models;
+
+import java.time.LocalDate;
+
+public class Employee {
+	private long employeeNo;
+	private String name;
+	private LocalDate doj;
+	private int experience;
+
+}

@@ -1,0 +1,12 @@
+package com.hsbc.tax.utilities;
+
+public class StringTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		System.out.println(" ".isEmpty());
+		System.out.println(" ".isBlank());
+	}
+
+}

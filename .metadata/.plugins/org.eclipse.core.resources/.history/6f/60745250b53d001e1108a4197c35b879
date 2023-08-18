@@ -1,0 +1,17 @@
+package com.hsbc.tax.utilities;
+
+public class StringTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+       //calculates the length
+		System.out.println(" ".isEmpty());
+		//checks the space
+		System.out.println(" ".isBlank());
+		
+		String data="First Name=\nLastName=\n";
+		System.out.println(data.lines());
+		
+	}
+
+}

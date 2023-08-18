@@ -1,0 +1,13 @@
+package com.hsbc.tax.models;
+
+public class Transaction {
+	
+	private Transaction() {
+		
+	}
+	
+	public static getTransactionInstance() {
+		return new Transaction();
+	}
+
+}

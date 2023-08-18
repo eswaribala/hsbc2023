@@ -1,0 +1,25 @@
+package com.hsbc.tax.utilities;
+
+public class OrderTest {
+
+	static {
+		System.out.println("Inside static block");
+	}
+	
+	{
+		System.out.println("Inside Instance Block");
+		
+	}
+	
+	public OrderTest() {
+		System.out.println("Inside constructor");
+	}
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		System.out.println("In main");
+	}
+
+}
