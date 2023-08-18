@@ -1,0 +1,19 @@
+package com.hsbc.banking.utilities;
+
+class App {
+
+	public static void main(String...strings) {
+		// TODO Auto-generated method stub
+
+		System.out.println("Rocking with Java 11 ");
+		
+		//data type ranges
+		
+		byte age=127;
+		
+		char letter='\u0069';
+		System.out.println("The character is"+letter);
+		
+	}
+
+}

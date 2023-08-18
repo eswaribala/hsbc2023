@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+I:\hsbc2023projects\.metadata\.plugins\org.eclipse.jdt.core
+634298842.index
+3048961288.index
