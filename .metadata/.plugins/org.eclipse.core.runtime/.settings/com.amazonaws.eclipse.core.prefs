@@ -4,6 +4,6 @@ cognitoIdentityId=us-east-1\:7346a603-e439-4075-b157-b965be6dfd4c
 cognitoIdentityPoolId=us-east-1\:d4fdc07f-94fd-4cc6-94fb-f903657f05c1
 credentialProfileAccountIds=02451665-8e97-43e4-9df9-65de40a5dc74|3ac264cf-03b7-4296-93e8-2239fe4c2893
 currentAccount=02451665-8e97-43e4-9df9-65de40a5dc74
-currentDefaultAccount=
+currentDefaultAccount=02451665-8e97-43e4-9df9-65de40a5dc74
 ec2PreferencesImported=true
 eclipse.preferences.version=1

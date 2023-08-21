@@ -6,6 +6,7 @@ import java.util.Arrays;
 import java.util.Random;
 
 import com.hsbc.tax.models.Employee;
+import com.hsbc.tax.models.Transaction;
 
 public class ServiceExcellenceApp {
 
@@ -53,6 +54,8 @@ public class ServiceExcellenceApp {
     	System.out.println(emp);
     
     }
+
+    Transaction transaction=Transaction.getTransactionInstance();
     
 	}
 
