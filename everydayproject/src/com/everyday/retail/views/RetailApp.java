@@ -1,10 +1,13 @@
 package com.everyday.retail.views;
 
 import java.time.LocalDate;
+import java.util.Arrays;
 import java.util.Random;
+import java.util.Scanner;
 
 import com.everyday.retail.bl.ProductBL;
 import com.everyday.retail.bl.ProductBLImpl;
+import com.everyday.retail.bl.ProductSorter;
 import com.everyday.retail.entities.Apparel;
 import com.everyday.retail.entities.Electronics;
 import com.everyday.retail.entities.FoodItems;
@@ -76,6 +79,47 @@ public class RetailApp {
 		
 		ProductBL productBL=new ProductBLImpl(products.length);
 		System.out.println(productBL.addProducts(products));
+		
+		Product[] results=productBL.getAllProducts();
+		
+		Arrays.sort(results,new ProductSorter());
+		
+		//pick by category
+		
+		Scanner scanner=new Scanner(System.in);
+		System.out.println("Enter Category");
+		String category=scanner.nextLine();		
+				
+			switch(category) {
+			case "FoodItems":
+				for(Product p : results) {
+					
+					if(p instanceof FoodItems) {
+						foodItem=(FoodItems) p;
+						System.out.println(foodItem);
+					}
+				}
+				break;
+			case "Apparel":
+				for(Product p : results) {
+					
+					if(p instanceof Apparel) {
+						apparel=(Apparel) p;
+						System.out.println(apparel);
+					}
+				}
+				break;
+				
+			case "Electronics":
+				for(Product p : results) {
+					
+					if(p instanceof Electronics) {
+						electronics=(Electronics) p;
+						System.out.println(electronics);
+					}
+				}
+				break;
+			}
 		
 		
 		

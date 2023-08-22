@@ -1,6 +1,7 @@
 package com.everyday.retail.entities;
 
 public class Product {
+//implements Comparable<Product> {
 	
 	protected long itemCode;
 	protected String name;
@@ -56,6 +57,12 @@ public class Product {
 	public String toString() {
 		return "Product [itemCode=" + itemCode + ", name=" + name + ", unitPrice=" + unitPrice + ", qty=" + qty + "]";
 	}
+
+	/*
+	 * @Override public int compareTo(Product o) { // TODO Auto-generated method
+	 * stub if(this.qty>o.qty) return -1; else if(this.qty<o.qty) return 1; else
+	 * return 0; }
+	 */
 	
 
 }
