@@ -1,0 +1,4 @@
+Model Name	 Seating Capacity
+Ford Ecosport	5
+Toyota Innova	7
+Hyundai i20	5
