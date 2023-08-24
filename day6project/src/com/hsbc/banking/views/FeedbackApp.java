@@ -15,8 +15,14 @@ public class FeedbackApp {
 		FeedbackDao feedbackDao;
       try {
 		feedbackDao=new FeedbackDaoImpl();
-		feedbackDao.storeFeedback(generateFeedback());
+		//feedbackDao.storeFeedback(generateFeedback());
+		for(Feedback feedback:feedbackDao.readFeedback())
+			System.out.println(feedback.getModelName()+","
+					+feedback.getSeatComfortRating());
 	} catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	} catch (ClassNotFoundException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}

@@ -1,5 +1,6 @@
 package com.hsbc.banking.dao;
 
+import java.io.EOFException;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -49,9 +50,16 @@ public class FeedbackDaoImpl implements FeedbackDao {
 		ObjectInputStream objectInputStream=new 
 				ObjectInputStream(new FileInputStream(file));
 		int count=0;
+		try {
 		while(objectInputStream.readObject()!=null) {
 			count++;
 		}
+		}
+		catch(EOFException exception)
+		{
+			
+		}
+
 		objectInputStream.close();
 		return count;		
 		
@@ -66,9 +74,14 @@ public class FeedbackDaoImpl implements FeedbackDao {
 				ObjectInputStream(new FileInputStream(file));
 		Object obj=null;
 		int i=0;
+		try {
 		while((obj=objectInputStream.readObject())!=null) {
 			feedbacks[i]=(Feedback) obj;
 			i++;
+		}
+		}
+		catch(EOFException eof) {
+			
 		}
 		objectInputStream.close();
 		return feedbacks;

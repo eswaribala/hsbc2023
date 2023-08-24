@@ -62,6 +62,9 @@ public class Feedback implements Serializable{
 	public void setDrivingComfortRating(byte drivingComfortRating) {
 		this.drivingComfortRating = drivingComfortRating;
 	}
+
+
+	
 	
 	
 }
