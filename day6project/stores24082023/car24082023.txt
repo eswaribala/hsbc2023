@@ -1,4 +1,1 @@
-Model Name	 Seating Capacity
-Ford Ecosport	5
-Toyota Innova	7
-Hyundai i20	5
+XUV 700	7XUV 700	7
