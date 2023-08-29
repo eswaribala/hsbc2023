@@ -153,21 +153,26 @@ public class CarDaoImpl implements CarDao {
 	public boolean addCars(List<Car> cars) throws ClassNotFoundException, SQLException {
 		// TODO Auto-generated method stub
 		conn=MySQLHelper.getConnection();
+		conn.setAutoCommit(false);
 		int[] rows;
 		String query=this.resourceBundle.getString("addcar");
 		try{
 			//step3 create statement
+			//System.out.println(cars.size());
+			this.statement=this.conn.prepareStatement(query);
 			for(Car car : cars) {
-				this.statement=this.conn.prepareStatement(query);
+			
 				this.statement.setString(1, car.getModelName());
 				this.statement.setByte(2, car.getSeatingCapacity());
 			    this.statement.addBatch();
 			}
 			//step 4 execute the statement and get results
 			rows=this.statement.executeBatch();
+			conn.commit();
 		}
 		finally {
 			//step 5 close the connection
+			conn.rollback();
 			conn.close();
 		}
 		if(rows.length>0)
