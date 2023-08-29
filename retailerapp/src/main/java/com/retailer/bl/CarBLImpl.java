@@ -1,6 +1,7 @@
 package com.retailer.bl;
 
 import java.sql.SQLException;
+import java.util.List;
 
 import com.retailer.dao.CarDao;
 import com.retailer.dao.CarDaoImpl;
@@ -31,6 +32,20 @@ public class CarBLImpl implements CarBL{
 		}
 		
 		return true;
+	}
+
+	@Override
+	public List<Car> getAllCars() {
+		// TODO Auto-generated method stub
+		List<Car> cars;
+		try {
+			cars=this.carDao.getAllCars();
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			throw new CarException("Cars Not Available"+e.getMessage());
+		}
+		
+		return cars;
 	}
 
 }

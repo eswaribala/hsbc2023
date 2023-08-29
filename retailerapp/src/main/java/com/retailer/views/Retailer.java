@@ -11,9 +11,25 @@ public class Retailer {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-        Car car=null;
+        //Car car=null;
         //instantiate car business layer
-        CarBL carBL=new CarBLImpl();
+        CarBL carBL=new CarBLImpl();		
+        //retrieve cars
+        try {
+        for(Car car : carBL.getAllCars()) {
+        	System.out.println(car.getModelName()+","
+        +car.getSeatingCapacity());
+        }
+        }
+        catch(CarException e) {
+        	System.out.println(e.getMessage());
+        }
+        
+		
+	}
+
+	private static void add(CarBL carBL) {
+		Car car;
 		try(Scanner scanner=new Scanner(System.in);) {
 			car=new Car();
 			System.out.println("Enter model name");
@@ -26,7 +42,6 @@ public class Retailer {
 		catch(CarException e) {
 			System.out.println(e.getMessage());
 		}
-		
 	}
 
 }
