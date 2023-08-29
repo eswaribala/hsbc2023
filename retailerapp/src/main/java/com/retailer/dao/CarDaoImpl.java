@@ -2,7 +2,10 @@ package com.retailer.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 import com.retailer.helpers.MySQLHelper;
@@ -13,6 +16,7 @@ public class CarDaoImpl implements CarDao {
 	private Connection conn;
 	private PreparedStatement statement;
 	private ResourceBundle resourceBundle;
+	private ResultSet resultSet;
 	
 	//read properties
 	public CarDaoImpl() {
@@ -44,6 +48,30 @@ public class CarDaoImpl implements CarDao {
        		return true;
 		else
 			return false;
+	}
+
+	@Override
+	public List<Car> getAllCars() throws ClassNotFoundException, SQLException {
+		// TODO Auto-generated method stub
+		//step 2 get connection
+		conn=MySQLHelper.getConnection();
+		String query=this.resourceBundle.getString("getallcars");
+		List<Car> cars=new ArrayList<Car>();
+	    try{
+					//step3 create statement
+		  this.statement=this.conn.prepareStatement(query);
+		  this.resultSet=this.statement.executeQuery();
+		  //step 4
+		  while(this.resultSet.next()) {
+			  cars.add(new Car(this.resultSet.getString(1),this.resultSet.getByte(2)));
+		  }
+	    }
+	    finally
+	    {
+	    	//step5 
+	    	conn.close();
+	    }
+		return cars;
 	}
 
 }
