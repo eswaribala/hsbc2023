@@ -12,4 +12,5 @@ public interface CarBL {
 	Car getCarByModelName(String modelName);
     Car updateCarSeatingCapacity(Car car);
     boolean deleteCar(String modelName);
+    boolean addCars(List<Car> cars);
 }

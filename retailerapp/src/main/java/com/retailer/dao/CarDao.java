@@ -12,4 +12,7 @@ public interface CarDao {
     Car getCarByModelName(String modelName)throws ClassNotFoundException, SQLException ;
     Car updateCarSeatingCapacity(Car car)throws ClassNotFoundException, SQLException ;
     boolean deleteCar(String modelName)throws ClassNotFoundException, SQLException ;
+    
+    boolean addCars(List<Car> cars) throws ClassNotFoundException, SQLException;
+
 }

@@ -87,4 +87,17 @@ public class CarBLImpl implements CarBL{
 		return status;
 	}
 
+	@Override
+	public boolean addCars(List<Car> cars) {
+		// TODO Auto-generated method stub
+		boolean status=false;
+		try {
+			status=this.carDao.addCars(cars);
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			throw new CarException("Cars Not Available"+e.getMessage());
+		}
+		return status;
+	}
+
 }

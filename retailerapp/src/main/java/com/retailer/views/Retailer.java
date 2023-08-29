@@ -1,5 +1,8 @@
 package com.retailer.views;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
 
 import com.retailer.bl.CarBL;
@@ -11,15 +14,14 @@ public class Retailer {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-        //Car car=null;
+        Car car=null;
         //instantiate car business layer
         CarBL carBL=new CarBLImpl();		
-        //retrieve cars
+        //retrieve car
+        
         try {
-        for(Car car : carBL.getAllCars()) {
-        	System.out.println(car.getModelName()+","
-        +car.getSeatingCapacity());
-        }
+        	System.out.println(carBL.addCars(generateCars()));
+        
         }
         catch(CarException e) {
         	System.out.println(e.getMessage());
@@ -28,6 +30,15 @@ public class Retailer {
 		
 	}
 
+	private static List<Car> generateCars(){
+		List<Car> cars=new ArrayList<Car>();
+		for(int i=0;i<100;i++)
+			cars.add(new Car("car"+i,
+					(byte)(4+new Random().nextInt(3))));
+		return cars;
+	}
+	
+	
 	private static void add(CarBL carBL) {
 		Car car;
 		try(Scanner scanner=new Scanner(System.in);) {

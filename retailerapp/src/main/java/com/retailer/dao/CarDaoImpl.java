@@ -127,6 +127,7 @@ public class CarDaoImpl implements CarDao {
 	public boolean deleteCar(String modelName) throws ClassNotFoundException, SQLException {
 		// TODO Auto-generated method stub
 		conn=MySQLHelper.getConnection();
+		conn.setAutoCommit(false);
 		int rows=0;
 		String query=this.resourceBundle.getString("deletecar");
 		try{
@@ -134,14 +135,43 @@ public class CarDaoImpl implements CarDao {
 			this.statement=this.conn.prepareStatement(query);
 			this.statement.setString(1, modelName);			
 			//step 4 execute the statement and get results
-			rows=this.statement.executeUpdate();						
+			rows=this.statement.executeUpdate();
+			conn.commit();
+		}
+		finally {
+			//step 5 close the connection
+			conn.rollback();
+			conn.close();
+		}
+		if(rows>0)
+	 	 return true;
+		else
+			return false;
+	}
+
+	@Override
+	public boolean addCars(List<Car> cars) throws ClassNotFoundException, SQLException {
+		// TODO Auto-generated method stub
+		conn=MySQLHelper.getConnection();
+		int[] rows;
+		String query=this.resourceBundle.getString("addcar");
+		try{
+			//step3 create statement
+			for(Car car : cars) {
+				this.statement=this.conn.prepareStatement(query);
+				this.statement.setString(1, car.getModelName());
+				this.statement.setByte(2, car.getSeatingCapacity());
+			    this.statement.addBatch();
+			}
+			//step 4 execute the statement and get results
+			rows=this.statement.executeBatch();
 		}
 		finally {
 			//step 5 close the connection
 			conn.close();
 		}
-		if(rows>0)
-	 	 return true;
+		if(rows.length>0)
+       		return true;
 		else
 			return false;
 	}
