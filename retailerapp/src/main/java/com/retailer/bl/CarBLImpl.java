@@ -48,4 +48,43 @@ public class CarBLImpl implements CarBL{
 		return cars;
 	}
 
+	@Override
+	public Car getCarByModelName(String modelName) {
+		// TODO Auto-generated method stub
+		Car car=null;
+		try {
+			car=this.carDao.getCarByModelName(modelName);
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			throw new CarException("Cars Not Available"+e.getMessage());
+		}
+		return car;
+	}
+
+	@Override
+	public Car updateCarSeatingCapacity(Car car) {
+		// TODO Auto-generated method stub
+		Car carObj=null;
+		try {
+			carObj=this.carDao.updateCarSeatingCapacity(car);
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			throw new CarException("Cars Not Available"+e.getMessage());
+		}
+		return carObj;
+	}
+
+	@Override
+	public boolean deleteCar(String modelName) {
+		// TODO Auto-generated method stub
+		boolean status=false;
+		try {
+			status=this.carDao.deleteCar(modelName);
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			throw new CarException("Cars Not Available"+e.getMessage());
+		}
+		return status;
+	}
+
 }
