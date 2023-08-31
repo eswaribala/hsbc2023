@@ -42,10 +42,23 @@
     <form class="form">
         <fieldset>
             <legend><h1 class="heading">Employee Registration</h1></legend>
+            <input type="text" id="firstName" placeholder="First Name" pattern="[a-zA-Z]{5,25}">
+            <input type="text" id="lastName" placeholder="Last Name" pattern="[a-zA-Z]{5,25}">
+            <input type="text" id="gender" placeholder="Gender" list="genderList">
+            <input type="date" id="dob" placeholder="DOB" min="2000-01-01">
+            <input type="email" id="email" placeholder="Email">
+            <input type="tel" id="contactNo" placeholder="Contact No" pattern="[0-9]{10}">
+            <input type="file" id="photo" placeholder="Profile Photo">
+            <textarea type="text" id="address" placeholder="Address" rows="10"></textarea>
+            <input type="color" id="color">
         </fieldset>
 
     </form>
-
+    <datalist id="genderList">
+        <option>MALE</option>
+        <option>FEMALE</option>
+        <option>TRANSGENDER</option>
+    </datalist>
 </section>
 <footer>
 

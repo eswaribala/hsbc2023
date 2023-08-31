@@ -58,6 +58,12 @@ header nav ul li a:hover{
     float:right;
 }
 
+
 .form fieldset legend{
     text-align: center;
+}
+
+.form input,textarea{
+    width:100%;
+    padding:2%;
 }
