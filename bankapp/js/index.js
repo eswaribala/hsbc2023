@@ -14,9 +14,17 @@ window.addEventListener('load',function (){
         querySelector("#address").value;
         var contactNo=document.
         querySelector("#contactNo").value;
-        var fileName=document.
-        querySelector("#photo").value;
+        var fileRef=document.
+        querySelector("#photo");
+        var fileType=/image.*/;
 
+        if(fileRef.files[0].type.match(fileType)){
+           var fileReader=new FileReader();
+            fileReader.readAsDataURL(fileRef.files[0]);
+            fileReader.onload=function(){
+                window.localStorage.setItem("profilePhoto",fileReader.result);
+            }
+        }
         //convert this into json
         var employee={
             "firstName":firstName,
@@ -27,6 +35,7 @@ window.addEventListener('load',function (){
             "gender":gender
         }
         console.log(JSON.stringify(employee));
+        window.localStorage.setItem("Employee",JSON.stringify(employee));
 
     })
 })
