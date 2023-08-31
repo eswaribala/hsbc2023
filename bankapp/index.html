@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>HSBC</title>
     <link type="text/css" rel="stylesheet" href="css/index.css">
-
+    <script type="text/javascript" src="js/index.js"></script>
 </head>
 <body>
 <header>
@@ -39,17 +39,17 @@
 </header>
 <section>
 
-    <form class="form">
+    <form class="form" onsubmit="return false">
         <fieldset>
             <legend><h1 class="heading">Employee Registration</h1></legend>
-            <input type="text" id="firstName" placeholder="First Name" pattern="[a-zA-Z]{5,25}">
-            <input type="text" id="lastName" placeholder="Last Name" pattern="[a-zA-Z]{5,25}">
-            <input type="text" id="gender" placeholder="Gender" list="genderList">
-            <input type="date" id="dob" placeholder="DOB" min="2000-01-01">
-            <input type="email" id="email" placeholder="Email">
-            <input type="tel" id="contactNo" placeholder="Contact No" pattern="[0-9]{10}">
+            <input type="text" id="firstName" required placeholder="First Name" pattern="[a-zA-Z]{5,25}">
+            <input type="text" id="lastName" required placeholder="Last Name" pattern="[a-zA-Z]{5,25}">
+            <input type="text" id="gender" required placeholder="Gender" list="genderList">
+            <input type="date" id="dob" required placeholder="DOB" min="2000-01-01">
+            <input type="email" id="email" required placeholder="Email">
+            <input type="tel" id="contactNo" required placeholder="Contact No" pattern="[0-9]{10}">
             <input type="file" id="photo" placeholder="Profile Photo">
-            <textarea type="text" id="address" placeholder="Address" rows="10"></textarea>
+            <textarea type="text" id="address" required placeholder="Address" rows="10"></textarea>
             <input type="color" id="color">
             <input type="submit" value="submit">
         </fieldset>
