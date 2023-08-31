@@ -45,7 +45,7 @@ header nav ul li a:hover{
 }
 
 .heading{
-    background-image: linear-gradient(to left,blueviolet,darkslateblue,lawngreen,orange);
+    background-image: radial-gradient(black,blueviolet,goldenrod,darkslateblue,lawngreen,orange);
     -webkit-background-clip: text;
     font-size: larger;
     font-weight: bold;
@@ -53,3 +53,11 @@ header nav ul li a:hover{
     font-family: "Lucida Calligraphy"
 }
 
+.form{
+    width: 40%;
+    float:right;
+}
+
+.form fieldset legend{
+    text-align: center;
+}
