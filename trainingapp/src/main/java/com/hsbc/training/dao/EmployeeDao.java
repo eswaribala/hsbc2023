@@ -12,6 +12,6 @@ public interface EmployeeDao {
 
 	boolean addEmployee(Employee emp);
 	TreeMap<Long,Employee> getAllEmployees();
-	boolean registerTraining(ConceptualTraining training);
+	boolean registerTraining(Employee emp,ConceptualTraining training);
 	Hashtable<Employee,List<ConceptualTraining>> registeredTrainings();
 }

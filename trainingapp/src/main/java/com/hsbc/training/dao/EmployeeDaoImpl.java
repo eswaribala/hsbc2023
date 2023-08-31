@@ -39,7 +39,7 @@ public class EmployeeDaoImpl implements EmployeeDao{
 	}
 
 	@Override
-	public boolean registerTraining(ConceptualTraining training) {
+	public boolean registerTraining(Employee emp,ConceptualTraining training) {
 		// TODO Auto-generated method stub
 		return false;
 	}
