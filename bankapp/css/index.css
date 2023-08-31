@@ -43,3 +43,13 @@ header nav ul li a:hover{
     color: orangered;
     background-color: white;
 }
+
+.heading{
+    background-image: linear-gradient(to left,blueviolet,darkslateblue,lawngreen,orange);
+    -webkit-background-clip: text;
+    font-size: larger;
+    font-weight: bold;
+    color: transparent;
+    font-family: "Lucida Calligraphy"
+}
+
