@@ -16,7 +16,8 @@ public class Retailer {
 		// TODO Auto-generated method stub
         Car car=null;
         //instantiate car business layer
-        CarBL carBL=new CarBLImpl();		
+        //factory invocation
+        CarBL carBL=new CarBLImpl("JDBC");		
         //retrieve car
         
         try {

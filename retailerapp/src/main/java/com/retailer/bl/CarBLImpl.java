@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.retailer.dao.CarDao;
 import com.retailer.dao.CarDaoImpl;
+import com.retailer.dao.CarDaoJPAImpl;
 import com.retailer.exceptions.CarException;
 import com.retailer.models.Car;
 
@@ -12,11 +13,15 @@ public class CarBLImpl implements CarBL{
 
 	private CarDao carDao;
 	
-	public CarBLImpl() {
+	public CarBLImpl(String instanceName) {
 		super();
 		// TODO Auto-generated constructor stub
 		//instantiate dao implementation
-		this.carDao=new CarDaoImpl();
+		//factory pattern implementation
+		if(instanceName.equals("JDBC"))
+		 this.carDao=new CarDaoImpl();
+		else
+		 this.carDao=new CarDaoJPAImpl();	
 	}
 
 	@Override

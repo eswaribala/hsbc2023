@@ -8,7 +8,7 @@ import java.util.ResourceBundle;
 public class MySQLHelper {
 	
 	private static ResourceBundle resourceBundle;
-	
+	//singleton pattern implemented
 	public static Connection getConnection() throws ClassNotFoundException, SQLException {
 		resourceBundle=ResourceBundle
 				.getBundle("db");

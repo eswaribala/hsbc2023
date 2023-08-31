@@ -1,22 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.hsbc.banking.models.Feedback"/>
-    <fullyQualifiedTypeName name="java.nio.file.Paths"/>
-    <fullyQualifiedTypeName name="java.nio.file.Path"/>
-    <fullyQualifiedTypeName name="java.nio.file.Files"/>
-    <fullyQualifiedTypeName name="java.util.EnumSet"/>
-    <fullyQualifiedTypeName name="java.nio.file.StandardOpenOption"/>
-    <fullyQualifiedTypeName name="com.hsbc.banking.models.Customer"/>
-    <fullyQualifiedTypeName name="com.hsbc.banking.bl.SimpleThread"/>
-    <fullyQualifiedTypeName name="com.hsbc.banking.bl.Clock"/>
-    <fullyQualifiedTypeName name="com.hsbc.banking.models.Account"/>
-    <fullyQualifiedTypeName name="com.hsbc.banking.bl.AccountThread"/>
-    <fullyQualifiedTypeName name="com.hsbc.banking.models.Vehicle"/>
-    <fullyQualifiedTypeName name="com.hsbc.banking.models.Toll"/>
     <fullyQualifiedTypeName name="com.hsbc.banking.models.Bridge"/>
     <fullyQualifiedTypeName name="com.hsbc.banking.bl.SimulationThread"/>
     <fullyQualifiedTypeName name="java.io.File"/>
-    <fullyQualifiedTypeName name="java.util.ResourceBundle"/>
     <fullyQualifiedTypeName name="java.io.ObjectInputStream"/>
     <fullyQualifiedTypeName name="java.io.ObjectOutputStream"/>
     <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
@@ -50,14 +36,28 @@
     <fullyQualifiedTypeName name="java.util.Map"/>
     <fullyQualifiedTypeName name="java.util.Iterator"/>
     <fullyQualifiedTypeName name="java.util.Collections"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.Collection"/>
     <fullyQualifiedTypeName name="com.amazon.ecomm.models.Invoice"/>
-    <fullyQualifiedTypeName name="java.util.Random"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
     <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
     <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
+    <fullyQualifiedTypeName name="com.retailer.dao.CarDao"/>
+    <fullyQualifiedTypeName name="com.retailer.dao.CarDaoImpl"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="com.retailer.exceptions.CarException"/>
+    <fullyQualifiedTypeName name="com.retailer.models.Car"/>
+    <fullyQualifiedTypeName name="com.retailer.bl.CarBL"/>
+    <fullyQualifiedTypeName name="com.retailer.bl.CarBLImpl"/>
+    <fullyQualifiedTypeName name="com.retailer.helpers.MySQLHelper"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="java.sql.Statement"/>
+    <fullyQualifiedTypeName name="java.util.ResourceBundle"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSetMetaData"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="com.retailer.dao.CarDaoJPAImpl"/>
 </qualifiedTypeNameHistroy>
