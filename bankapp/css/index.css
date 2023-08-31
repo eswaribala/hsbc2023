@@ -56,6 +56,7 @@ header nav ul li a:hover{
 .form{
     width: 40%;
     float:right;
+    background-color: blanchedalmond;
 }
 
 
@@ -64,6 +65,17 @@ header nav ul li a:hover{
 }
 
 .form input,textarea{
-    width:100%;
-    padding:2%;
+    width:80%;
+    margin-left: 6%;
+    margin-bottom: 4%;
+    padding:3%;
+}
+.form input[type=submit]{
+    border-radius: 50px 50px 50px 50px;
+    background-color: orangered;
+    color: white;
+    width:60%;
+    margin-left: 25%;
+    font-size: x-large;
+    font-weight: bold;
 }
