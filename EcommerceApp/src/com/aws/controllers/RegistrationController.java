@@ -46,8 +46,9 @@ public class RegistrationController extends HttpServlet {
 		PrintWriter out=response.getWriter();
 		String employee=request.getParameter("employee");		
 		Gson gson=new Gson();
-		Object object=gson.fromJson(employee, Employee.class)
-		out.println(object);
+		//convert json to java
+		Employee employeeObj=gson.fromJson(employee, Employee.class);
+		out.println("Welcome "+employeeObj.getFirstName()+"!!!!");
 		
 		
 		
