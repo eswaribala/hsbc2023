@@ -34,27 +34,21 @@ public class RegistrationController extends HttpServlet {
 		Enumeration<String> enumData=request
 				.getParameterNames();
 		PrintWriter out=response.getWriter();
-		boolean status=false;
-		while(enumData.hasMoreElements()) {
-			
-			if(request.getParameter(enumData.nextElement())
-					!=null)
-				status=true;
-			else
-				status=false;				
-		}
+		String employee=request.getParameter("employee");
+		out.println("Registered..."+employee);
 		
-		if(status)
-			request.getRequestDispatcher("SuccessController")
-			.forward(request, response);
-		else
-		{
-			request.setAttribute("error", "Registration Failed..");
-			request.getRequestDispatcher("ErrorController")
-			.include(request, response);
-			request.getRequestDispatcher("index.html")
-			.include(request, response);
-		}
+		/*
+		 * boolean status=false; while(enumData.hasMoreElements()) {
+		 * 
+		 * if(request.getParameter(enumData.nextElement()) !=null) status=true; else
+		 * status=false; }
+		 * 
+		 * if(status) request.getRequestDispatcher("SuccessController")
+		 * .forward(request, response); else { request.setAttribute("error",
+		 * "Registration Failed.."); request.getRequestDispatcher("ErrorController")
+		 * .include(request, response); request.getRequestDispatcher("index.html")
+		 * .include(request, response); }
+		 */
 		
 		
 	}

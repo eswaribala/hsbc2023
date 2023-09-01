@@ -62,15 +62,17 @@ function createAjaxCall(employee){
         let response;
         if ((ajaxObj.readyState == 4 && ajaxObj.status == 200)) {
             response = ajaxObj.responseText;
-            userArray = JSON.parse(response);
+            console.log(response);
+           /* userArray = JSON.parse(response);
 
             userArray.forEach(x => {
                 console.log(x.name, x.email);
-            })
+            })*/
         }
     }
     ajaxObj.open("POST","RegistrationController",true);
-
-    ajaxObj.send(employee);
+    ajaxObj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    ajaxObj.send("employee=" + JSON.stringify(employee)); 
+   
 }
 
