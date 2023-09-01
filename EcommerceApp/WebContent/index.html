@@ -1,21 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+    <meta charset="UTF-8">
+    <title>HSBC</title>
+    <link type="text/css" rel="stylesheet" href="css/index.css">
+    <script type="text/javascript" src="js/index.js"></script>
 </head>
 <body>
-<form method="post" action="ProcessController">
-<input type="checkbox" name="site" value="http://www.google.com"/> 
-Google
-<br/>
-<input type="checkbox" name="site" value="http://www.rediffmail.com"/> 
-Rediff
-<br/>
-<input type="checkbox" name="site" value="http://www.yahoo.com"/> 
-Yahoo!
-<br/>
-<input type="submit" value="submit"/>
-<input type="reset" value="reset"/>
-</form>
+<header>
+   <article class="header">
+    <figure>
+        <img src="images/logo.png">
+    </figure>
+    <nav>
+     <ul>
+         <li>
+             <a href="#"> Banking </a>
+         </li>
+         <li>
+             <a href="#"> Borrowing </a>
+         </li>
+         <li>
+             <a href="#"> Online Banking</a>
+         </li>
+         <li>
+             <a href="#">Investing</a>
+         </li>
+         <li>
+             <a href="#"> NRI</a>
+         </li>
+         <li>
+             <a href="#"> Offers</a>
+         </li>
+
+     </ul>
+    </nav>
+   </article>
+</header>
+<section>
+
+    <a href="#">View Profile</a>
+    <form class="form" onsubmit="return false">
+   <!--  <form class="form" method="post" action="RegistrationController"> -->
+        <fieldset>
+            <legend><h1 class="heading">Employee Registration</h1></legend>
+            <input type="text" name="firstName" required placeholder="First Name" pattern="[a-zA-Z]{5,25}">
+            <input type="text" name="lastName" required placeholder="Last Name" pattern="[a-zA-Z]{5,25}">
+            <input type="text" name="gender" required placeholder="Gender" list="genderList">
+            <input type="date" name="dob" required placeholder="DOB" min="2000-01-01">
+            <input type="email" name="email" required placeholder="Email">
+            <input type="tel" name="contactNo" required placeholder="Contact No" pattern="[0-9]{10}">
+            <input type="file" name="photo" placeholder="Profile Photo">
+            <textarea type="text" name="address" required placeholder="Address" rows="10"></textarea>
+            <input type="color" name="color">
+            <input type="submit" value="submit">
+        </fieldset>
+
+    </form>
+    <datalist id="genderList">
+        <option>MALE</option>
+        <option>FEMALE</option>
+        <option>TRANSGENDER</option>
+    </datalist>
+</section>
+<footer>
+
+</footer>
+</body>
 </html>

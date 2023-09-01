@@ -10,16 +10,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class ProcessController
+ * Servlet implementation class SuccessController
  */
-@WebServlet(asyncSupported = true, urlPatterns = { "/ProcessController" })
-public class ProcessController extends HttpServlet {
+@WebServlet(asyncSupported = true, urlPatterns = { "/SuccessController" })
+public class SuccessController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ProcessController() {
+    public SuccessController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -29,25 +29,14 @@ public class ProcessController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		 String[] sites=request.getParameterValues("site"); 
-		 PrintWriter writer=response.getWriter();
-		 response.setContentType("text/html");
-		 try {
-		 for(String site: sites) {
-			 //writer.println("<a href="+site+">Click Here</a>");
-			if(site.equals("unknown"))
-			  response.sendError(response.SC_NOT_FOUND,
-					  "No url available");
-			else	
-			 response.sendRedirect(site);
-		 
-		 }
-		 }
-		 catch(NullPointerException ex) {
-			 writer.println("Site Not Selected");
-		 }
-		
-		
+	
+		PrintWriter out=response.getWriter();
+		response.setContentType("text/html");
+		out.println("<h5>Welcome  "
+		+request.getParameter("firstName")+"!!!</h5>");
+		out.println("<p>Registration Successful</p>");
+	
+	
 	}
 
 }

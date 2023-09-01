@@ -33,14 +33,17 @@ public class TestInitParamController extends HttpServlet {
     }
 
     private String url;
-    
+    private ServletContext ctx;
+    private  int score;
 	@Override
 	public void init(ServletConfig config) throws ServletException {
 		// TODO Auto-generated method stub
 		super.init(config);
 		this.url=config.getInitParameter("url");
+		this.ctx= config.getServletContext();
+		this.score =Integer.parseInt(this.ctx.
+				getInitParameter("score"));
 	}
-
 
 
 	/**
@@ -61,10 +64,10 @@ public class TestInitParamController extends HttpServlet {
 		 response.setContentType("text/html");
 		//servlet config
 	     writer.println("<a href="+this.url+">Click Here</a>");
-		//servlet context
-	    ServletContext ctx= getServletContext();
-	    int score=Integer.parseInt(ctx.getInitParameter("score"));
-	    score++;
+		//servlet context      
+	    
+	   
+	    this.score++;
 	    writer.println("<h4>Score="+score+"</h4>");
 	}
 
