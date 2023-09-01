@@ -17,5 +17,6 @@
 	<classpathentry kind="lib" path="I:/HSBC2023/json-flattener-0.16.5.jar"/>
 	<classpathentry kind="lib" path="I:/HSBC2023/json-smart-2.5.0.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/flattener"/>
+	<classpathentry kind="lib" path="I:/HSBC2023/gson-2.1.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

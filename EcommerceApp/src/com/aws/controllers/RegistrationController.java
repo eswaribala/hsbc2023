@@ -11,7 +11,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.aws.models.Employee;
 import com.github.wnameless.json.flattener.JsonFlattener;
+import com.google.gson.Gson;
 
 import net.minidev.json.JSONObject;
 import net.minidev.json.parser.JSONParser;
@@ -42,21 +44,10 @@ public class RegistrationController extends HttpServlet {
 		Enumeration<String> enumData=request
 				.getParameterNames();
 		PrintWriter out=response.getWriter();
-		String employee=request.getParameter("employee");
-		JSONParser parser=new JSONParser();
-		Object object;
-		JSONObject jsonObject;
-		Map<String, Object> flattenedJsonMap;
-		try {
-			object= parser.parse(employee);
-			jsonObject=(JSONObject) object;
-			out.println("Registered..."+jsonObject);
-		
-			
-		} catch (ParseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		String employee=request.getParameter("employee");		
+		Gson gson=new Gson();
+		Object object=gson.fromJson(employee, Employee.class)
+		out.println(object);
 		
 		
 		
