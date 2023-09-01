@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.hsbc.banking.models.Bridge"/>
-    <fullyQualifiedTypeName name="com.hsbc.banking.bl.SimulationThread"/>
-    <fullyQualifiedTypeName name="java.io.File"/>
-    <fullyQualifiedTypeName name="java.io.ObjectInputStream"/>
-    <fullyQualifiedTypeName name="java.io.ObjectOutputStream"/>
-    <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
-    <fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
-    <fullyQualifiedTypeName name="java.io.IOException"/>
     <fullyQualifiedTypeName name="com.amazon.ecommerce.dao.ProductDao"/>
     <fullyQualifiedTypeName name="com.amazon.ecommerce.dao.ProductDaoImpl"/>
     <fullyQualifiedTypeName name="com.amazon.ecommerce.exceptions.DiskAccessException"/>
@@ -24,24 +16,16 @@
     <fullyQualifiedTypeName name="java.util.ListIterator"/>
     <fullyQualifiedTypeName name="java.util.LinkedList"/>
     <fullyQualifiedTypeName name="java.util.PriorityQueue"/>
-    <fullyQualifiedTypeName name="java.util.Comparator"/>
     <fullyQualifiedTypeName name="com.amazon.ecomm.dao.InvoiceSorter"/>
-    <fullyQualifiedTypeName name="java.util.HashSet"/>
-    <fullyQualifiedTypeName name="java.util.TreeSet"/>
-    <fullyQualifiedTypeName name="java.util.Hashtable"/>
     <fullyQualifiedTypeName name="com.amazon.ecomm.models.Customer"/>
     <fullyQualifiedTypeName name="com.amazon.ecomm.dao.CustomerDao"/>
     <fullyQualifiedTypeName name="com.amazon.ecomm.dao.CustomerDaoImpl"/>
-    <fullyQualifiedTypeName name="java.util.Set"/>
-    <fullyQualifiedTypeName name="java.util.Map"/>
-    <fullyQualifiedTypeName name="java.util.Iterator"/>
     <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="java.util.Collection"/>
     <fullyQualifiedTypeName name="com.amazon.ecomm.models.Invoice"/>
     <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
     <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
-    <fullyQualifiedTypeName name="java.time.LocalDate"/>
     <fullyQualifiedTypeName name="java.sql.DriverManager"/>
     <fullyQualifiedTypeName name="com.retailer.dao.CarDao"/>
     <fullyQualifiedTypeName name="com.retailer.dao.CarDaoImpl"/>
@@ -56,8 +40,24 @@
     <fullyQualifiedTypeName name="java.util.ResourceBundle"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="java.sql.ResultSetMetaData"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.Random"/>
     <fullyQualifiedTypeName name="com.retailer.dao.CarDaoJPAImpl"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="java.util.HashSet"/>
+    <fullyQualifiedTypeName name="com.hsbc.training.exceptions.EmployeeAlreadyExistsException"/>
+    <fullyQualifiedTypeName name="com.hsbc.training.exceptions.TrainingAlreadyExistsException"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.hsbc.training.models.Employee"/>
+    <fullyQualifiedTypeName name="com.hsbc.training.bl.EmployeeSorter"/>
+    <fullyQualifiedTypeName name="java.util.Set"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
+    <fullyQualifiedTypeName name="java.util.Hashtable"/>
+    <fullyQualifiedTypeName name="java.util.TreeSet"/>
+    <fullyQualifiedTypeName name="java.util.TreeMap"/>
+    <fullyQualifiedTypeName name="java.util.Comparator"/>
+    <fullyQualifiedTypeName name="com.hsbc.training.models.ConceptualTraining"/>
+    <fullyQualifiedTypeName name="com.hsbc.training.bl.TrainingSorter"/>
+    <fullyQualifiedTypeName name="java.util.SortedMap"/>
 </qualifiedTypeNameHistroy>

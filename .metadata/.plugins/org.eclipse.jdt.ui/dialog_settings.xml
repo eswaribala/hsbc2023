@@ -90,9 +90,9 @@
 	<section name="DialogBounds_OverrideMethodDialog">
 		<item key="DIALOG_X_ORIGIN" value="640"/>
 		<item key="DIALOG_Y_ORIGIN" value="79"/>
-		<item key="DIALOG_WIDTH" value="658"/>
-		<item key="DIALOG_HEIGHT" value="661"/>
-		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+		<item key="DIALOG_WIDTH" value="935"/>
+		<item key="DIALOG_HEIGHT" value="885"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|12.0|1|WINDOWS|1|-20|0|0|0|700|0|0|0|0|3|2|1|34|Segoe UI"/>
 	</section>
 	<section name="javadoc">
 		<item key="javadoc_command_history" value="C:\Program Files\Java\jdk-11.0.15\bin\javadoc.exe"/>

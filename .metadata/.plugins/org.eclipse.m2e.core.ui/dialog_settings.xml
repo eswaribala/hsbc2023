@@ -45,12 +45,14 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="com.hsbc.training"/>
 			<item value="com.retailer"/>
 			<item value="com.hsbc.banking"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="trainingapp"/>
 			<item value="retailerapp"/>
 			<item value="reatilerapp"/>
 			<item value="mavenbankingapp"/>
