@@ -3,12 +3,20 @@ package com.aws.controllers;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Enumeration;
+import java.util.Map;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.github.wnameless.json.flattener.JsonFlattener;
+
+import net.minidev.json.JSONObject;
+import net.minidev.json.parser.JSONParser;
+import net.minidev.json.parser.ParseException;
+
 
 /**
  * Servlet implementation class RegistrationController
@@ -35,7 +43,24 @@ public class RegistrationController extends HttpServlet {
 				.getParameterNames();
 		PrintWriter out=response.getWriter();
 		String employee=request.getParameter("employee");
-		out.println("Registered..."+employee);
+		JSONParser parser=new JSONParser();
+		Object object;
+		JSONObject jsonObject;
+		Map<String, Object> flattenedJsonMap;
+		try {
+			object= parser.parse(employee);
+			jsonObject=(JSONObject) object;
+			out.println("Registered..."+jsonObject);
+		
+			
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
+		
 		
 		/*
 		 * boolean status=false; while(enumData.hasMoreElements()) {
