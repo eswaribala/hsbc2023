@@ -5,7 +5,7 @@ import java.util.Date;
 public class Employee {
 	private String firstName;
 	private String lastName;
-    private Date dob;
+    private String dob;
 	private long contactNo;
 	private String address;
 	private String gender;
@@ -21,10 +21,12 @@ public class Employee {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	public Date getDob() {
+	
+
+	public String getDob() {
 		return dob;
 	}
-	public void setDob(Date dob) {
+	public void setDob(String dob) {
 		this.dob = dob;
 	}
 	public long getContactNo() {
