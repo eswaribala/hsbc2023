@@ -1,15 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.amazon.ecommerce.dao.ProductDao"/>
-    <fullyQualifiedTypeName name="com.amazon.ecommerce.dao.ProductDaoImpl"/>
-    <fullyQualifiedTypeName name="com.amazon.ecommerce.exceptions.DiskAccessException"/>
-    <fullyQualifiedTypeName name="com.amazon.ecommerce.bl.ProductBL"/>
-    <fullyQualifiedTypeName name="com.amazon.ecommerce.bl.ProductBLImpl"/>
-    <fullyQualifiedTypeName name="java.io.Serializable"/>
-    <fullyQualifiedTypeName name="java.io.FileInputStream"/>
-    <fullyQualifiedTypeName name="java.io.EOFException"/>
-    <fullyQualifiedTypeName name="com.amazon.ecommerce.exceptions.ProductException"/>
-    <fullyQualifiedTypeName name="com.amazon.ecommerce.models.Product"/>
     <fullyQualifiedTypeName name="com.amazon.ecommerce.models.SeasonalProduct"/>
     <fullyQualifiedTypeName name="com.amazon.ecomm.dao.InvoiceDao"/>
     <fullyQualifiedTypeName name="com.amazon.ecomm.dao.InvoiceDaoImpl"/>
@@ -24,7 +14,6 @@
     <fullyQualifiedTypeName name="java.util.Collection"/>
     <fullyQualifiedTypeName name="com.amazon.ecomm.models.Invoice"/>
     <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
-    <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
     <fullyQualifiedTypeName name="java.sql.DriverManager"/>
     <fullyQualifiedTypeName name="com.retailer.dao.CarDao"/>
@@ -51,7 +40,6 @@
     <fullyQualifiedTypeName name="com.hsbc.training.models.Employee"/>
     <fullyQualifiedTypeName name="com.hsbc.training.bl.EmployeeSorter"/>
     <fullyQualifiedTypeName name="java.util.Set"/>
-    <fullyQualifiedTypeName name="java.util.Map"/>
     <fullyQualifiedTypeName name="java.util.Iterator"/>
     <fullyQualifiedTypeName name="java.util.Hashtable"/>
     <fullyQualifiedTypeName name="java.util.TreeSet"/>
@@ -60,4 +48,16 @@
     <fullyQualifiedTypeName name="com.hsbc.training.models.ConceptualTraining"/>
     <fullyQualifiedTypeName name="com.hsbc.training.bl.TrainingSorter"/>
     <fullyQualifiedTypeName name="java.util.SortedMap"/>
+    <fullyQualifiedTypeName name="javax.servlet.ServletContext"/>
+    <fullyQualifiedTypeName name="java.util.Enumeration"/>
+    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+    <fullyQualifiedTypeName name="org.apache.tomcat.util.json.JSONParser"/>
+    <fullyQualifiedTypeName name="jdk.nashorn.internal.parser.JSONParser"/>
+    <fullyQualifiedTypeName name="net.minidev.json.parser.JSONParser"/>
+    <fullyQualifiedTypeName name="net.minidev.json.JSONObject"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="com.github.wnameless.json.flattener.JsonFlattener"/>
+    <fullyQualifiedTypeName name="com.google.gson.Gson"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="com.aws.models.Employee"/>
 </qualifiedTypeNameHistroy>
