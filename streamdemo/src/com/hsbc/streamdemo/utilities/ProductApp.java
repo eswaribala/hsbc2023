@@ -3,7 +3,9 @@ package com.hsbc.streamdemo.utilities;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
+import java.util.stream.Collectors;
 
 import com.hsbc.streamdemo.models.Order;
 import com.hsbc.streamdemo.models.Product;
@@ -18,6 +20,53 @@ public class ProductApp {
 		.map(p->p.getName())
 		.distinct()
 		.forEach(System.out::println);
+		
+		//cumulative sum
+		int result=getOrders().stream()
+				.map(o->o.getProducts())
+				.flatMap(p->p.stream())
+		        .map(product->product.getCost())  
+		        .reduce(0,Integer::sum);  
+		System.out.println(result);
+		
+		//allmatch
+		System.out.println(getOrders().stream()
+		.map(o->o.getProducts())
+		.flatMap(p->p.stream())
+		.allMatch(p->p.getName().endsWith("99")));
+		
+				
+		//nonematch
+		System.out.println(getOrders().stream()
+				.map(o->o.getProducts())
+				.flatMap(p->p.stream())
+				.noneMatch(p->p.getName().endsWith("99")));
+				
+		
+		//anymatch
+		System.out.println(getOrders().stream()
+				.map(o->o.getProducts())
+				.flatMap(p->p.stream())
+				.anyMatch(p->p.getName().endsWith("99")));
+		
+	
+	
+		Map<Long, Product> resultMap = 
+				getOrders().stream()
+				.map(o->o.getProducts())
+				.flatMap(p->p.stream()) 
+				.collect(Collectors.toMap
+						(Product::getProductCode, p -> p));
+
+		
+		
+		//parallel sort
+		
+		
+		
+		
+		
+		
 		
 	}
 	
