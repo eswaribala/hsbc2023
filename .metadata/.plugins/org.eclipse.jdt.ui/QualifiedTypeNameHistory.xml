@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.retailer.exceptions.CarException"/>
-    <fullyQualifiedTypeName name="com.retailer.models.Car"/>
-    <fullyQualifiedTypeName name="com.retailer.bl.CarBL"/>
-    <fullyQualifiedTypeName name="com.retailer.bl.CarBLImpl"/>
     <fullyQualifiedTypeName name="com.retailer.helpers.MySQLHelper"/>
     <fullyQualifiedTypeName name="java.sql.Connection"/>
     <fullyQualifiedTypeName name="java.sql.Statement"/>
@@ -34,7 +30,6 @@
     <fullyQualifiedTypeName name="com.google.gson.Gson"/>
     <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="com.aws.models.Employee"/>
-    <fullyQualifiedTypeName name="java.util.Comparator"/>
     <fullyQualifiedTypeName name="java.util.function.Function"/>
     <fullyQualifiedTypeName name="com.hsbc.lambdasdemo.models.Employee"/>
     <fullyQualifiedTypeName name="java.util.function.Predicate"/>
@@ -60,4 +55,9 @@
     <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
     <fullyQualifiedTypeName name="java.util.GregorianCalendar"/>
     <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="com.hsbc.swipemachineapp.dao.TransactionDao"/>
+    <fullyQualifiedTypeName name="com.hsbc.streamdemo.models.Employee"/>
+    <fullyQualifiedTypeName name="java.time.Period"/>
+    <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+    <fullyQualifiedTypeName name="java.util.Comparator"/>
 </qualifiedTypeNameHistroy>
