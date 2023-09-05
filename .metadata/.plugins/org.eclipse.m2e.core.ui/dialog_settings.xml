@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="I:\hsbc2023projects\moduletest"/>
 			<item value="I:\hsbc2023projects\BankingApp"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -45,6 +46,7 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="com.hsbc"/>
 			<item value="com.hsbc.training"/>
 			<item value="com.retailer"/>
 			<item value="com.hsbc.banking"/>
@@ -52,6 +54,7 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="multireleasejar"/>
 			<item value="trainingapp"/>
 			<item value="retailerapp"/>
 			<item value="reatilerapp"/>

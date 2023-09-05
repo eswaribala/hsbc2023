@@ -6,6 +6,7 @@ import java.time.Period;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.function.BiFunction;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
@@ -92,6 +93,9 @@ public class BuiltinFNDemo {
 	
 	DataSupplier<String> nameSupplier=empObject::getName;
 	System.out.println(nameSupplier.getData());
+	
+	
+	
 		
 	}
 	

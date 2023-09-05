@@ -1,4 +1,7 @@
 window.addEventListener('load',function(){
+
+	
+	
     var ajaxObj=null;
     try
     {
