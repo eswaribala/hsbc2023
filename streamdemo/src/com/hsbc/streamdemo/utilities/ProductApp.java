@@ -19,36 +19,15 @@ public class ProductApp {
 
 	public static void main(String[] args) {
 
-	List<LocalDate> dates=getOrders().stream()			
-		.filter(o->o.getOrderDate()
-				.isAfter(LocalDate.of(2022, 12, 31)))
-		.map(o->o.getOrderDate())
-		.collect(Collectors.toList());
+	Optional<Object> optional=Optional.empty();
 	
-	Optional<List<LocalDate>> optional=Optional.of(dates);
-	Optional<LocalDate> optional1=null;
-	if(optional.isEmpty())
-	{
-		optional1=Optional.empty();
-		System.out.println(optional.get());
-	}
-	else
-		System.out.println("No order present");
-			
-			
-		
-		  try { 
-			 
-		  optional1.orElseThrow(()-> new
-		  OrderDateException ("No order placed for 2023")); 
-		  } 
-		  catch(OrderDateException  e)
-		  { 
-			  System.out.println(e.getMessage()); 
-		  }
-		 
-	
-		
+		try {
+			optional.orElseThrow(()->new 
+					OrderDateException("Date not present"));
+		} catch (Throwable e) {
+			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
+		}
 		
 		
 	}
@@ -187,6 +166,35 @@ public class ProductApp {
 				
 				.map(o->o.getOrderId()+","+o.getOrderDate())
 				.forEach(System.out::println);
+				
+				List<LocalDate> dates=getOrders().stream()			
+						.filter(o->o.getOrderDate()
+								.isAfter(LocalDate.of(2022, 12, 31)))
+						.map(o->o.getOrderDate())
+						.collect(Collectors.toList());
+					
+					Optional<List<LocalDate>> optional=Optional.of(dates);
+					Optional<LocalDate> optional1=null;
+					if(optional.isEmpty())
+					{
+						optional1=Optional.empty();
+						System.out.println(optional.get());
+					}
+					else
+						System.out.println("No order present");
+							
+							
+						
+						  try { 
+							 
+						  optional1.orElseThrow(()-> new
+						  OrderDateException ("No order placed for 2023")); 
+						  } 
+						  catch(OrderDateException  e)
+						  { 
+							  System.out.println(e.getMessage()); 
+						  }
+						 
 	}
 
 }
