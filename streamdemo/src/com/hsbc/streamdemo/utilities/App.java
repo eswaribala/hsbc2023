@@ -61,7 +61,7 @@ public class App {
 private static List<Employee> getEmployees(){
 		
 		List<Employee> employees=new ArrayList<Employee>();
-		for(int i=0;i<100000;i++) {
+		for(int i=0;i<1000000;i++) {
 			employees.add(new Employee(new Random().nextInt(10000),
 					"employeee"+i,LocalDate.
 					of(2000+new Random().nextInt(22),
