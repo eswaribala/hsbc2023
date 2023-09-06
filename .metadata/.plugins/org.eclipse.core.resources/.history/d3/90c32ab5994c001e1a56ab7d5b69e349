@@ -1,0 +1,9 @@
+package com.hsbc.springcoredemo.models;
+
+public class Customer {
+	
+	private long customerId;
+	private String name;
+	private LocalDate dob;
+
+}

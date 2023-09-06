@@ -1,0 +1,25 @@
+package com.hsbc.springcoredemo.utilities;
+
+
+import com.hsbc.springcoredemo.models.Customer;
+
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	//IOC
+	//Step1
+		Resource resource=new ClassPathResource("com/hsbc/"
+				+ "springcoredemo/resources/applicationContext.xml");
+	//Step 2		
+		BeanFactory beanFactory=new XmlBeanFactory(resource);
+	//Step 3
+		Customer customer=(Customer) beanFactory.getBean("customer");	
+		
+		System.out.println("Customer Id"+customer.getCustomerId());
+		
+		
+		
+	}
+
+}

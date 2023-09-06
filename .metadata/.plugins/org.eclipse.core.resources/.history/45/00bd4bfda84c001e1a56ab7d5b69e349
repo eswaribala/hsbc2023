@@ -1,0 +1,42 @@
+package com.hsbc.springcoredemo.utilities;
+
+import java.util.Date;
+
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.xml.XmlBeanFactory;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
+
+import com.hsbc.springcoredemo.models.Customer;
+
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	//IOC
+	//Step1
+		Resource resource=new ClassPathResource("com/hsbc/"
+				+ "springcoredemo/resources/applicationContext.xml");
+	//Step 2		
+		BeanFactory beanFactory=new XmlBeanFactory(resource);
+	//Step 3
+		Customer customer=(Customer) beanFactory.getBean("customer");	
+		
+		System.out.println("Customer Id "+customer.getCustomerId());
+		System.out.println("Customer Name "+customer.getName());
+		System.out.println("Customer DOB "+customer.getDob().toString());
+		
+	//repeat
+     Customer customer1=(Customer) beanFactory.getBean("newCustomer");			
+		System.out.println("Customer Id "+customer1.getCustomerId());
+		System.out.println("Customer Name "+customer1.getName());
+		System.out.println("Customer DOB "+customer1.getDob().toString());
+		
+	//scope of the object	
+		Customer customer2=(Customer) beanFactory.getBean("customer");
+		
+		System.out.println(customer.equals(customer2));
+		
+	}
+
+}

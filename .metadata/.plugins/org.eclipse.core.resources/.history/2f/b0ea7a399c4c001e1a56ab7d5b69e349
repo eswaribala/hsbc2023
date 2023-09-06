@@ -1,0 +1,11 @@
+/**
+ * 
+ */
+/**
+ * @author Balasubramaniam
+ *
+ */
+module springcoredemo {
+	requires spring.core;
+	requires spring.beans;
+}

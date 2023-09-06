@@ -1,0 +1,19 @@
+package com.hsbc.springcoredemo.utilities;
+
+import org.springframework.core.io.Resource;
+
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	//IOC
+	//Step1
+		Resource resource=new ClassPathResource();
+		
+		
+		
+		
+	}
+
+}
