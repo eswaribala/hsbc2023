@@ -1,0 +1,8 @@
+package com.hsbc.springcoredemo.models;
+
+public class Account {
+	
+	private long accountNo;
+	
+
+}

@@ -9,7 +9,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 
+import com.hsbc.springcoredemo.models.Account;
+import com.hsbc.springcoredemo.models.Corporate;
 import com.hsbc.springcoredemo.models.Customer;
+import com.hsbc.springcoredemo.models.Individual;
 
 public class App {
 
@@ -26,30 +29,51 @@ public class App {
 		BeanFactory beanFactory=new XmlBeanFactory(resource);
 	//Step 3
 		Customer customer=(Customer) beanFactory.getBean("customer");	
-		
 		System.out.println("Customer Id "+customer.getCustomerId());
 		System.out.println("Customer Name "+customer.getName());
-		System.out.println("Customer DOB "+customer.getDob().toString());
+		for(Account account: customer.getAccounts())
+			System.out.println(account.getAccountNo()+","
+						+account.getRunningTotal());
+		
+		
 		
 	//repeat
      Customer customer1=(Customer) beanFactory.getBean("newCustomer");			
 		System.out.println("Customer Id "+customer1.getCustomerId());
 		System.out.println("Customer Name "+customer1.getName());
-		System.out.println("Customer DOB "+customer1.getDob().toString());
+		
 		
 	//scope of the object	
 		Customer customer2=(Customer) beanFactory.getBean("customer");
-		customer2.setCustomerId(453534);
-		customer2.setDob(new Date(95,12,7) );
+		customer2.setCustomerId(453534);		
 		System.out.println("Customer Id "+customer2.getCustomerId());
 		System.out.println("Customer Name "+customer2.getName());
-		System.out.println("Customer DOB "+customer2.getDob().toString());
+
 		
 		//singleton
 		System.out.println(customer.equals(customer2));
 	
 		//not singleton
 		System.out.println(customer1.equals(customer2));
+		
+		//create individual instance
+		
+		Individual individual=(Individual) beanFactory.getBean("individual");
+		System.out.println("Customer Id "+individual.getCustomerId());
+		System.out.println("Customer Name "+individual.getName());
+		
+		System.out.println("DOB "+individual.getDob().toString());
+		System.out.println("Gender "+individual.getGender());
+
+        //create corporate instance
+		Corporate corporate=(Corporate) beanFactory.getBean("corporate");
+		System.out.println("Customer Id "+corporate.getCustomerId());
+		System.out.println("Customer Name "+corporate.getName());		
+		System.out.println("CompanyType "+corporate.getCompanyType());
+	
+		
+		
+		
 		
 	}
 

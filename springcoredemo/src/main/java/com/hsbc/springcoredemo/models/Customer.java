@@ -2,25 +2,37 @@ package com.hsbc.springcoredemo.models;
 
 import java.time.LocalDate;
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.context.annotation.Scope;
+
 
 public class Customer {
 	
 	private long customerId;
-	private String name;
-	private Date dob;
+	private String name;	
+	private List<Account> accounts;
 	
+	
+	
+	public List<Account> getAccounts() {
+		return accounts;
+	}
+
+	public void setAccounts(List<Account> accounts) {
+		this.accounts = accounts;
+	}
+
 	public Customer() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Customer(long customerId, String name, Date dob) {
+	public Customer(long customerId, String name) {
 		super();
 		this.customerId = customerId;
 		this.name = name;
-		this.dob = dob;
+		
 	}
 
 	public long getCustomerId() {
@@ -39,13 +51,7 @@ public class Customer {
 		this.name = name;
 	}
 
-	public Date getDob() {
-		return dob;
-	}
-
-	public void setDob(Date dob) {
-		this.dob = dob;
-	}
+	
 	
 	
 	

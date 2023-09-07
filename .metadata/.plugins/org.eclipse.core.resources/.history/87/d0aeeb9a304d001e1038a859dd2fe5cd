@@ -1,0 +1,6 @@
+package com.hsbc.springcoredemo.models;
+
+public class Corporate extends Customer {
+
+	private CompanyType companyType;
+}
