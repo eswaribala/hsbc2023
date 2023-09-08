@@ -1,8 +1,8 @@
-package com.hsbc.ecommerceappv1.repositories;
+package com.hsbc.ecommerceapi.repositories;
 
 import java.util.List;
 
-import com.hsbc.ecommerceappv1.models.Customer;
+import com.hsbc.ecommerceapi.models.Customer;
 
 public interface CustomerRepository {
 

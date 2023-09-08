@@ -1,4 +1,4 @@
-package com.hsbc.ecommerceappv1.repositories;
+package com.hsbc.ecommerceapi.repositories;
 
 import java.util.List;
 
@@ -8,7 +8,7 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import com.hsbc.ecommerceappv1.models.Customer;
+import com.hsbc.ecommerceapi.models.Customer;
 
 @Repository
 public class CustomerRepoImpl implements CustomerRepository {

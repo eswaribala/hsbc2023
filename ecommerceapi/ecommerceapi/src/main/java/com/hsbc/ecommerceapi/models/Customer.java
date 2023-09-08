@@ -1,4 +1,4 @@
-package com.hsbc.ecommerceappv1.models;
+package com.hsbc.ecommerceapi.models;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

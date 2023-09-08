@@ -1,4 +1,4 @@
-package com.hsbc.ecommerceappv1;
+package com.hsbc.ecommerceapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
