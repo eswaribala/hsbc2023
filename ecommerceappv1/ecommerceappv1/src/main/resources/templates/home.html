@@ -40,18 +40,18 @@
 <section>
 
     <a href="#">View Profile</a>
-    <form class="form" onsubmit="return false">
+    <form class="form" method="post"  action="#" th:action="@{/login}" th:object="${customer}">
         <fieldset>
             <legend><h1 class="heading">Employee Registration</h1></legend>
-            <input type="text" id="firstName" required placeholder="First Name" pattern="[a-zA-Z]{5,25}">
-            <input type="text" id="lastName" required placeholder="Last Name" pattern="[a-zA-Z]{5,25}">
-            <input type="text" id="gender" required placeholder="Gender" list="genderList">
-            <input type="date" id="dob" required placeholder="DOB" min="2000-01-01">
-            <input type="email" id="email" required placeholder="Email">
-            <input type="tel" id="contactNo" required placeholder="Contact No" pattern="[0-9]{10}">
-            <input type="file" id="photo" placeholder="Profile Photo">
-            <textarea type="text" id="address" required placeholder="Address" rows="10"></textarea>
-            <input type="color" id="color">
+            <input type="text" th:field="*{firstName}"  required placeholder="First Name" pattern="[a-zA-Z]{5,25}">
+            <input type="text" th:field="*{lastName}" required placeholder="Last Name" pattern="[a-zA-Z]{5,25}">
+            <input type="text" th:field="*{gender}" required placeholder="Gender" list="genderList">
+            <input type="date" th:field="*{dob}" required placeholder="DOB" min="2000-01-01">
+            <input type="email" th:field="*{email}" required placeholder="Email">
+            <input type="tel" th:field="*{contactNo}" required placeholder="Contact No" pattern="[0-9]{10}">
+           
+            <textarea type="text" th:field="*{address}" required placeholder="Address" rows="10"></textarea>
+           
             <input type="submit" value="submit">
         </fieldset>
 
