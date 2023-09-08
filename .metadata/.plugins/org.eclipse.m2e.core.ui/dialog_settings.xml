@@ -2,11 +2,17 @@
 <section name="Workbench">
 	<section name="wizardPage">
 		<list key="groupId">
+			<item value="com.hsbc.ecommerceapp"/>
+			<item value="com.hsbc.webtest"/>
+			<item value="com.hsbc.springcontext"/>
 			<item value="com.hsbc.springcore"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="ecommerceapp"/>
+			<item value="webtest"/>
+			<item value="springcontextdemo"/>
 			<item value="springcoredemo"/>
 		</list>
 		<list key="version">
