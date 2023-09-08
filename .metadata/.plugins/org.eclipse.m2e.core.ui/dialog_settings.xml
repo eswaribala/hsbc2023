@@ -23,4 +23,19 @@
 	</section>
 	<section name="org.eclipse.m2e.core.pom.dependencies">
 	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="I:\hsbc2023springprojects\ecommerceapi\ecommerceapi"/>
+			<item value="I:\hsbc2023springprojects\ecommerceappv1\ecommerceappv1"/>
+			<item value="I:\hsbc2023springprojects\ecommerceapp"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
 </section>
