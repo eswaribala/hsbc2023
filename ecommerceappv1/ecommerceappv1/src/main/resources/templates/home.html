@@ -40,7 +40,7 @@
 <section>
 
     <a href="#">View Profile</a>
-    <form class="form" method="post"  action="#" th:action="@{/login}" th:object="${customer}">
+    <form class="form" method="post"  action="#" th:action="@{/register}" th:object="${customer}">
         <fieldset>
             <legend><h1 class="heading">Employee Registration</h1></legend>
             <input type="text" th:field="*{firstName}"  required placeholder="First Name" pattern="[a-zA-Z]{5,25}">
