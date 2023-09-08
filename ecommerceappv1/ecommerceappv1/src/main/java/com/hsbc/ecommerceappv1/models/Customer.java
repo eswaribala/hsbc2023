@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Customer {
-
+    private long customerId;  
 	private String firstName;
 	private String lastName;
 	private String dob;
