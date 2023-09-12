@@ -1,0 +1,184 @@
+1. Which of the following statement is correct? (Choose two) 
+a. Spring is an open source framework.
+b. Spring is heavyweight.
+c. Spring supports tight coupling.
+d. Spring using Dependency Injection and supports loose coupling.
+
+Answer: a and d
+============================================================
+2.org.hibernate.SessionFactory can manage contextual sessions and allows to retrieve them by:- 
+ a. getSession() method
+ b. getCurrent() method
+ c. getCurrentSession() method
+ d. None of the above
+
+Answer: c
+=============================================================
+ 3. What is Dependency Injection? 
+a. A design pattern which implements Inversion of Control for software applications.
+b. One of the spring module.
+c. A technique to get dependencies of any project.
+d. Used to promote tight coupling in code.
+Answer: a
+==========================================
+4.What is the correct syntax for annotation wiring? 
+ a. <annotation-context:config /> to bean configuration.
+ b.<annotation-config /> to bean configuration.
+ c. <annotation-context-config /> to bean configuration.
+ d. <context:annotation-config/> to bean configuration.
+
+Answer:d
+=================================
+5. Annotation for Hibernate exceptions to be translated into Spring’s DataAccessException for consistent exception handling 
+a. @Translation
+b. @Repo
+c. @Repository
+d.  None of the above
+Answer: c
+=============================================
+6. What is the default scope of the beans? 
+a. Prototype
+b. Session
+c. Request
+d. Singleton
+
+Answer: d
+=========================================
+7. What is Bean in Spring? 
+a. Component
+b. Object
+c. Class
+d. Container
+
+Answer: a
+=============================================
+8. How to use <ref> in Spring framework? 
+ a. <ref> is used with bean id
+ b. <ref> is used with string values
+
+Answer: a
+===================================
+9. Which method is used to process bean before initialization callback? 
+ a. postProcessAfterInitialization()
+ b. scope
+ c.  postProcessBeforeInitialization()
+ d. it's own constructor
+
+Answer: c
+==========================================
+10. Which tag is also allowed by static field? 
+a. util:constant
+b. list
+c. set
+d. constructor-args
+
+Answer: a
+================================
+11. How does spring achieve DI or IOC? 
+a. Service locator pattern
+b. Factory pattern
+c. Abstract factory pattern
+d. Singleton pattern
+Answer:b
+=========================================
+12. Which interface in spring is responsible for Instantiating and managing the so called Spring beans? 
+ a.BeanFactory
+ b.ApplicationContext
+ c.BeanDefinition
+ d.BeanFactoryAware
+Answer:a
+==========================================
+13. A bean can have more than one name using multiple id attributes? 
+a. True
+b. False
+
+Answer:b
+============================
+14. Beans can be created by which of the following properties? 
+a. Static factory-method
+b. Instance Factory-Method
+c. All of the above
+d. None of the above
+
+Answer:b
+=========================================
+15. Is Singleton beans are thread safe in Spring Framework? 
+ a.No, singleton beans are not thread-safe in Spring framework.
+ b. Yes, singleton beans are thread-safe in Spring framework.
+Answer:b
+=============================================
+16. What are different types of Autowire? 
+a. byName
+b. byType
+c. constructor
+d. autodetect
+e. All of the above
+Answer: e
+==========================================
+17. In what points, can weaving be applied? 
+a. Compile Time
+b. Class load Time
+c. Runtime
+d. All of the above
+
+Answer:c
+=================================
+18. What exceptions do the DAO classes, use in Spring throw? 
+a. SQLException
+b. Exception
+c. IOException
+Answer:a
+======================================
+19. How many types of lOC (dependency injection)? 
+a. Setter Injection
+b. Constructor Injection
+c. Interface Injection
+d. All of the above
+
+Answer: d
+=================================
+20. To deal with the databases, spring framework provides______________ 
+ a. DatabaseTemplate
+ b. JdbcPluggins
+ c. JdbcDrivers
+ d. JdbcTemplate
+
+Answer:d
+========================================
+21. ClassPathXmlApplicationContext searches .xml file in: 
+ a.specific location within filesystem
+ b.anywhere in project path (including jar file)
+ c.anywhere in classpath (including jar file)
+ d.in WEB_INF folder
+
+Answer:c
+=========================================
+22. @Component annotation on class indicates 
+a. that a bean should be created for the class
+b. that a bean should not be created for the class
+c. that autowiring should be enabled for the class
+d. that autowiring should not be enabled for the class
+Answer:a
+==============================================
+23. In AOP, the job of an aspect is called___________ 
+ a.point-cut
+ b.advice
+ c.join-points
+ d.weaving
+Answer:d
+===============================
+24. The process of applying aspects to a target object to create a new proxied object is called____________ 
+ a.point-cut
+ b.weaving
+ c.AspectJ
+ d.advice
+Answer:a
+==============================
+25. Spring provides features: 1 .Resource management 2 .Exception handling 3 .Transaction participation 4 .Resource unwrapping 5. Abstraction for BLOB and CLOB handling 
+a. 1,2,3,4,5
+b. 1,3,4,5
+c. 1,2,4,5
+d.  None
+
+Answer:b
+=================================
