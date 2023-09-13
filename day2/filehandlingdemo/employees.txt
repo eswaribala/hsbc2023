@@ -1,0 +1,4 @@
+Web Server
+We can develop and use HTTP Web Server within no time. We need to use http package to implement Web Server. We will discuss one post on how to install http package and develop a Web Server.
+Better Socket API
+Node JS Platform provides very good Socket Module API to develop Real-time, Multi-User Chat and Multi-Player Gaming Applications very easily. It supports Unix Socket programming like pipe().
