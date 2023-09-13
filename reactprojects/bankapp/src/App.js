@@ -20,7 +20,7 @@ export class BankApp extends Component{
         console.log("Entering  constructor");
         //step 1 create state
         this.state={
-            currentTime:new Date()
+            currentTime:new Date(),
         }
 
     }
@@ -32,6 +32,7 @@ export class BankApp extends Component{
     }
 
 
+
     componentWillUnmount() {
         //super.componentWillUnmount();
         console.log("Entering  will mount");
@@ -40,8 +41,9 @@ export class BankApp extends Component{
         console.log("Entering  render");
         return(
             <div className="App-header">
-                <h1>HSBC Bank</h1>
-                <h5>{this.state.currentTime.toLocaleString()}</h5>
+                <h1 className="multicolortext">HSBC Bank</h1>
+                <h3>{this.state.currentTime.toLocaleTimeString()}</h3>
+
             </div>
         )
     }
