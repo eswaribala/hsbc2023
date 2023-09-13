@@ -1,5 +1,6 @@
 import './App.css';
 import {Component} from "react";
+import LOGO from './Logo/Logo'
 
 /*
 function BankApp() {
@@ -41,6 +42,7 @@ export class BankApp extends Component{
         console.log("Entering  render");
         return(
             <div className="App-header">
+                <LOGO/>
                 <h1 className="multicolortext">HSBC Bank</h1>
                 <h3>{this.state.currentTime.toLocaleTimeString()}</h3>
 
