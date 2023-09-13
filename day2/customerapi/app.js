@@ -2,6 +2,7 @@ let config=require("./config");
 let express=require("express");
 let cors=require("cors");
 var bodyParser =require("body-parser");
+
 console.log(config.port);
 //create express instance
 let expressInstance=express();
@@ -9,7 +10,7 @@ let expressInstance=express();
 expressInstance.use(cors());
 //enable body parser
 expressInstance.use(bodyParser.json());
-
+expressInstance.use(express.urlencoded({ extended: true })); // support encoded bodies
 //api url mapping
 expressInstance.get("/",function(request,response){
  response.send("Rocking with nodejs express");
