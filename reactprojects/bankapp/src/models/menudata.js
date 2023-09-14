@@ -52,6 +52,66 @@ export const items=[
                 ]
             }
         ]
+    },
+
+    {
+        label: 'Borrowing',
+        icon: 'pi pi-fw pi-file',
+        items:[{
+
+                label: 'Home Loans',
+                icon: 'pi pi-fw pi-bookmark',
+                items:[{
+                    label: 'Loan Against Property',
+                    icon: 'pi pi-fw pi-bookmark',
+                },
+                    {
+                        label: 'NRI Home Loan',
+                        icon: 'pi pi-fw pi-bookmark',
+                    },
+
+                ]
+             },
+                {
+
+                    label: 'Personal Loans',
+                    icon: 'pi pi-fw pi-bookmark'
+                }
+
+
+        ]
+
+
+    },
+
+    {
+        label: 'Investments',
+        icon: 'pi pi-fw pi-file',
+        items:[{
+
+            label: 'Digital Wealth',
+            icon: 'pi pi-fw pi-bookmark',
+            items:[{
+                label: 'Wealth Management',
+                icon: 'pi pi-fw pi-bookmark',
+            },
+                {
+                    label: 'Wealth Dashboard',
+                    icon: 'pi pi-fw pi-bookmark',
+                },
+
+            ]
+        },
+            {
+
+                label: 'Insights',
+                icon: 'pi pi-fw pi-bookmark'
+            }
+
+
+        ]
+
+
     }
 
 
