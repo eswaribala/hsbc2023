@@ -3,7 +3,9 @@ import {Menubar} from "primereact/menubar";
 import {items} from "../models/menudata";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import {Routes} from "react-router";
+import {CashBackCard} from "../CashBackCard/CashBackcard";
 import './menu.css'
+
 //stateless component
 const menubar=()=>(
  <Router>
@@ -16,7 +18,11 @@ const menubar=()=>(
 
       </Menubar>
   </div>
-
+     {
+         <Routes>
+             <Route path="/Cashback-Card" element={<CashBackCard/>}></Route>
+         </Routes>
+     }
  </Router>
 );
 

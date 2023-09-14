@@ -9,7 +9,8 @@ export const items=[
                 items: [
                     {
                         label: 'Cashback Card',
-                        icon: 'pi pi-fw pi-briefcase'
+                        icon: 'pi pi-fw pi-briefcase',
+                        command: () => { window.location.href = "/Cashback-Card" }
                     },
                     {
                         label: 'Visa Platinum Card',
