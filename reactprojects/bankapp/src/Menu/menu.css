@@ -1,0 +1,25 @@
+.menu{
+    width:80%;
+    margin-left: 8%;
+    background-color: orangered;
+    margin-top: 2%;
+
+}
+.p-menubar{
+    background-color: orangered;
+    color: #77170a;
+}
+.p-menuitem {
+    font-size: x-large;
+    width:100%;
+}
+.p-menuitem-active a {
+    background: orangered !important;
+
+}
+
+.ui-menubar  {
+    border: 1px solid #aed0ea !important;
+    color: #ffffff !important;
+    font-weight: bolder !important;
+}
