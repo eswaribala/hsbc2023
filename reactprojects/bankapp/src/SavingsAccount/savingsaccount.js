@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import {InputText} from 'primereact/inputtext'
 import { Fieldset } from 'primereact/fieldset';
 import { InputTextarea } from 'primereact/inputtextarea';
+import { Button } from 'primereact/button';
 import './savingsaccount.css'
 //functional approach
 //React Hook 16.8
@@ -21,6 +22,22 @@ function SavingsAccount(props) {
     const [contactNo, setContactNo] = useState( propsContactNo,0);
     const [gender, setGender] = useState( propsGender,"");
     const [address, setAddress] = useState( propsAddress,"");
+    const [inputs, setInputs]= useState({});
+    const [errors, setErrors] = useState({
+        firstName: "",
+        lastName: "",
+        dob:"",
+        gender:"",
+        address:"",
+        email:"",
+        contactNo:0
+    });
+
+
+    //event handling
+    const handleSubmit=(event)=>{
+
+    }
 
 
 
@@ -67,9 +84,11 @@ function SavingsAccount(props) {
                           <label htmlFor="address" className="form-label">Address</label>
                          <InputTextarea id="address" rows={5} cols={30} value={address}
                                       autoResize  className="form-control"/>
-
-
                     </span>
+                       <span className="mt-5">
+                         <Button label="Submit" className="mt-3 form-control p-button-rounded p-button-danger"
+                              />
+                        </span>
                     </Fieldset>
                 </form>
             </div>
