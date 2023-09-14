@@ -12,8 +12,8 @@
     "web-vitals": "^2.1.4",
     "primeicons": "^5.0.0",
     "primereact": "^8.2.0",
-    "react-router-dom": "^6.3.0",
-    "react-router": "6.3.0"
+    "react-router-dom": "^6.6.2"
+
   },
   "scripts": {
     "start": "react-scripts start",
