@@ -10,29 +10,29 @@ export const items=[
                     {
                         label: 'Cashback Card',
                         icon: 'pi pi-fw pi-briefcase',
-                        command: () => { window.location.href = "/Cashback-Card" }
+                        command: () => { window.location.href = "/cashback-card" }
                     },
                     {
                         label: 'Visa Platinum Card',
                         icon: 'pi pi-fw pi-briefcase',
-                        command: () => { window.location.href = "/Visa-Platinum" }
+                        command: () => { window.location.href = "/cisa-platinum" }
                     },
                     {
                         label: 'Smart Value Card',
                         icon: 'pi pi-fw pi-briefcase',
-                        command: () => { window.location.href = "/Smart-Card" }
+                        command: () => { window.location.href = "/cmart-card" }
                     },
                     {
                         label: 'Compare Card',
                         icon: 'pi pi-fw pi-briefcase',
-                        command: () => { window.location.href = "/Compare-Card" }
+                        command: () => { window.location.href = "/compare-card" }
                     },
                 ]
             },
             {
                 label: 'CreditCard Features',
                 icon: 'pi pi-fw pi-credit-card',
-                command: () => { window.location.href = "/Card-Features" }
+                command: () => { window.location.href = "/card-features" }
             },
             {
                 separator: true
@@ -197,7 +197,7 @@ export const items=[
             items:[{
                 label: 'Travel',
                 icon: 'pi pi-fw pi-briefcase',
-                command: () => { window.location.href = "/travel" }
+                command: () => { window.location.href = "/online-travel" }
             }
             ]
         },
