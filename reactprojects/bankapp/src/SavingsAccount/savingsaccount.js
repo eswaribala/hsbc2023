@@ -68,38 +68,60 @@ function SavingsAccount(props) {
                     <Fieldset legend="Customer Form">
                     <span className="mt-5">
                         <label htmlFor="firstName">First Name</label>
-                        <InputText id="firstName" value={firstName} onChange={handleOnChange}  className="form-control"/>
-
+                        <InputText id="firstName" type="text" pattern="[a-zA-Z]*" value={firstName} onChange={handleOnChange}  className="form-control"/>
+                        {errors.firstName &&
+                        <div style={{ color: "red", paddingBottom: 10 }}>
+                            {errors.firstName}</div>
+                        }
                     </span>
                         <span className="mt-5">
                         <label htmlFor="lastName" className="form-label">Last Name</label>
-                        <InputText id="lastName" value={lastName} onChange={handleOnChange} className="form-control"/>
-
+                        <InputText id="lastName" type="text" pattern="[a-zA-Z]*" value={lastName} onChange={handleOnChange} className="form-control"/>
+                        {errors.lastName &&
+                            <div style={{ color: "red", paddingBottom: 10 }}>
+                                {errors.lastName}</div>
+                        }
                     </span>
                         <span className="mt-5">
                         <label htmlFor="email" className="form-label">Email</label>
-                        <InputText id="email" value={email} onChange={handleOnChange} className="form-control"/>
-
+                        <InputText id="email" type="email" value={email} onChange={handleOnChange} className="form-control"/>
+                        {errors.email &&
+                        <div style={{ color: "red", paddingBottom: 10 }}>
+                            {errors.email}</div>
+                        }
                     </span>
                     <span className="mt-5">
                         <label htmlFor="dob" className="form-label">DOB</label>
-                        <InputText id="dob" value={dob} onChange={handleOnChange} className="form-control"/>
-
+                        <InputText id="dob" type="date" required value={dob} onChange={handleOnChange} className="form-control"/>
+                    {errors.dob &&
+                    <div style={{ color: "red", paddingBottom: 10 }}>
+                        {errors.dob}</div>
+                    }
                     </span>
                     <span className="mt-5">
                          <label htmlFor="contactNo" className="form-label">Contact No</label>
-                        <InputText id="contactNo" value={contactNo} onChange={handleOnChange} className="form-control"/>
-
+                        <InputText id="contactNo" type="number" value={contactNo} onChange={handleOnChange} className="form-control"/>
+                        {errors.contactNo &&
+                        <div style={{ color: "red", paddingBottom: 10 }}>
+                            {errors.contactNo}</div>
+                        }
                     </span>
                     <span className="mt-5">
                         <label htmlFor="gender" className="form-label">Gender</label>
-                        <InputText id="gender" value={gender} onChange={handleOnChange} className="form-control"/>
-
+                        <InputText id="gender" type="text" value={gender} onChange={handleOnChange} className="form-control"/>
+                        {errors.gender &&
+                        <div style={{ color: "red", paddingBottom: 10 }}>
+                            {errors.gender}</div>
+                        }
                     </span>
                         <span className="mt-5">
                           <label htmlFor="address" className="form-label">Address</label>
                          <InputTextarea id="address" rows={5} cols={30} value={address}
                                       autoResize  onChange={handleOnChange} className="form-control"/>
+                        {errors.address &&
+                        <div style={{ color: "red", paddingBottom: 10 }}>
+                            {errors.address}</div>
+                        }
                     </span>
                        <span className="mt-5">
                          <Button label="Submit" className="mt-3 form-control p-button-rounded p-button-danger"
