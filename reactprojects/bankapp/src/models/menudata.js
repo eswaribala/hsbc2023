@@ -14,21 +14,25 @@ export const items=[
                     },
                     {
                         label: 'Visa Platinum Card',
-                        icon: 'pi pi-fw pi-briefcase'
+                        icon: 'pi pi-fw pi-briefcase',
+                        command: () => { window.location.href = "/Visa-Platinum" }
                     },
                     {
                         label: 'Smart Value Card',
-                        icon: 'pi pi-fw pi-briefcase'
+                        icon: 'pi pi-fw pi-briefcase',
+                        command: () => { window.location.href = "/Smart-Card" }
                     },
                     {
                         label: 'Compare Card',
-                        icon: 'pi pi-fw pi-briefcase'
+                        icon: 'pi pi-fw pi-briefcase',
+                        command: () => { window.location.href = "/Compare-Card" }
                     },
                 ]
             },
             {
                 label: 'CreditCard Features',
-                icon: 'pi pi-fw pi-credit-card'
+                icon: 'pi pi-fw pi-credit-card',
+                command: () => { window.location.href = "/Card-Features" }
             },
             {
                 separator: true
@@ -39,16 +43,19 @@ export const items=[
                 items:[
                     {
                         label: 'Savings Account',
-                        icon: 'pi pi-fw pi-briefcase'
+                        icon: 'pi pi-fw pi-briefcase',
+                        command: () => { window.location.href = "/savings-account" }
                     },
 
                     {
                         label: 'Fixed Deposit',
-                        icon: 'pi pi-fw pi-briefcase'
+                        icon: 'pi pi-fw pi-briefcase',
+                        command: () => { window.location.href = "/fixed-deposit" }
                     },
                     {
                         label: 'Debit Card',
-                        icon: 'pi pi-fw pi-briefcase'
+                        icon: 'pi pi-fw pi-briefcase',
+                        command: () => { window.location.href = "/debit-card" }
                     },
                 ]
             }
@@ -65,10 +72,12 @@ export const items=[
                 items:[{
                     label: 'Loan Against Property',
                     icon: 'pi pi-fw pi-briefcase',
+                    command: () => { window.location.href = "/loan-against-property" }
                 },
                     {
                         label: 'NRI Home Loan',
                         icon: 'pi pi-fw pi-briefcase',
+                        command: () => { window.location.href = "/nri-home-loan" }
                     },
 
                 ]
@@ -76,7 +85,8 @@ export const items=[
                 {
 
                     label: 'Personal Loans',
-                    icon: 'pi pi-fw pi-briefcase'
+                    icon: 'pi pi-fw pi-briefcase',
+                    command: () => { window.location.href = "/personal-loan" }
                 }
 
 
@@ -95,10 +105,12 @@ export const items=[
             items:[{
                 label: 'Wealth Management',
                 icon: 'pi pi-fw pi-briefcase',
+                command: () => { window.location.href = "/wealth-management" }
             },
                 {
                     label: 'Wealth Dashboard',
                     icon: 'pi pi-fw pi-briefcase',
+                    command: () => { window.location.href = "/wealth-dashboard" }
                 },
 
             ]
@@ -106,7 +118,8 @@ export const items=[
             {
 
                 label: 'Insights',
-                icon: 'pi pi-fw pi-briefcase'
+                icon: 'pi pi-fw pi-briefcase',
+                command: () => { window.location.href = "/insights" }
             }
 
 
@@ -124,6 +137,7 @@ export const items=[
             items:[{
                 label: 'FX Detail',
                 icon: 'pi pi-fw pi-briefcase',
+                command: () => { window.location.href = "/fx-details" }
             }
             ]
         },
@@ -134,6 +148,7 @@ export const items=[
                 items:[{
                     label: 'Global Money Transfers',
                     icon: 'pi pi-fw pi-briefcase',
+                    command: () => { window.location.href = "/remittances" }
                 }]
             }
 
@@ -152,6 +167,7 @@ export const items=[
             items:[{
                 label: 'Travel',
                 icon: 'pi pi-fw pi-briefcase',
+                command: () => { window.location.href = "/travel" }
             }
             ]
         },
@@ -162,6 +178,7 @@ export const items=[
                 items:[{
                     label: 'Global Money Transfers',
                     icon: 'pi pi-fw pi-briefcase',
+                    command: () => { window.location.href = "/reward-programs" }
                 }]
             }
 
@@ -180,6 +197,7 @@ export const items=[
             items:[{
                 label: 'Travel',
                 icon: 'pi pi-fw pi-briefcase',
+                command: () => { window.location.href = "/travel" }
             }
             ]
         },
@@ -190,6 +208,7 @@ export const items=[
                 items:[{
                     label: 'Simply Pay',
                     icon: 'pi pi-fw pi-briefcase',
+                    command: () => { window.location.href = "/simply-pay" }
                 }]
             }
 
