@@ -68,38 +68,38 @@ function SavingsAccount(props) {
                     <Fieldset legend="Customer Form">
                     <span className="mt-5">
                         <label htmlFor="firstName">First Name</label>
-                        <InputText id="firstName" value={firstName}  className="form-control"/>
+                        <InputText id="firstName" value={firstName} onChange={handleOnChange}  className="form-control"/>
 
                     </span>
                         <span className="mt-5">
                         <label htmlFor="lastName" className="form-label">Last Name</label>
-                        <InputText id="lastName" value={lastName} className="form-control"/>
+                        <InputText id="lastName" value={lastName} onChange={handleOnChange} className="form-control"/>
 
                     </span>
                         <span className="mt-5">
                         <label htmlFor="email" className="form-label">Email</label>
-                        <InputText id="email" value={email} className="form-control"/>
+                        <InputText id="email" value={email} onChange={handleOnChange} className="form-control"/>
 
                     </span>
                     <span className="mt-5">
                         <label htmlFor="dob" className="form-label">DOB</label>
-                        <InputText id="dob" value={dob} className="form-control"/>
+                        <InputText id="dob" value={dob} onChange={handleOnChange} className="form-control"/>
 
                     </span>
                     <span className="mt-5">
                          <label htmlFor="contactNo" className="form-label">Contact No</label>
-                        <InputText id="contactNo" value={contactNo} className="form-control"/>
+                        <InputText id="contactNo" value={contactNo} onChange={handleOnChange} className="form-control"/>
 
                     </span>
                     <span className="mt-5">
                         <label htmlFor="gender" className="form-label">Gender</label>
-                        <InputText id="gender" value={gender} className="form-control"/>
+                        <InputText id="gender" value={gender} onChange={handleOnChange} className="form-control"/>
 
                     </span>
                         <span className="mt-5">
                           <label htmlFor="address" className="form-label">Address</label>
                          <InputTextarea id="address" rows={5} cols={30} value={address}
-                                      autoResize  className="form-control"/>
+                                      autoResize  onChange={handleOnChange} className="form-control"/>
                     </span>
                        <span className="mt-5">
                          <Button label="Submit" className="mt-3 form-control p-button-rounded p-button-danger"
