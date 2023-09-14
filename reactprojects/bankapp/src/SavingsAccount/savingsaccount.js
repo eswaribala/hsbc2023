@@ -38,10 +38,17 @@ function SavingsAccount(props) {
 
     //event handling
     const handleOnChange=(event)=>{
-
         const name=event.target.name;
         const value=event.target.value;
-
+        setInputs(values=>({...values,[name]:value}))
+        if((inputs.firstName.length>0)
+            &&(inputs.lastName.length>5)
+            &&(inputs.email.length>0)
+            &&(inputs.contactNo>0)
+            &&(inputs.gender.length>0)
+            &&(inputs.address.length>5)
+        )
+            setIsAddDisabled(true);
     }
 
     const handleSubmit=(event)=>{
