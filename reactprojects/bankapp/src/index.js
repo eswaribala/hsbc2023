@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import {BankApp} from './App';
 import reportWebVitals from './reportWebVitals';
-import "primereact/resources/themes/vela-purple/theme.css";  //theme
+import "primereact/resources/themes/bootstrap4-dark-purple/theme.css";  //theme
 import "primereact/resources/primereact.min.css";                  //core css
 import "primeicons/primeicons.css";
 import 'bootstrap/dist/css/bootstrap.css'

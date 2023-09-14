@@ -4,6 +4,7 @@ import { Fieldset } from 'primereact/fieldset';
 import { InputTextarea } from 'primereact/inputtextarea';
 import { Button } from 'primereact/button';
 import { Calendar } from 'primereact/calendar';
+import { Dropdown } from 'primereact/dropdown';
 import './savingsaccount.css'
 //functional approach
 //React Hook 16.8
@@ -36,6 +37,9 @@ function SavingsAccount(props) {
     const [isAddDisabled, setIsAddDisabled] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
 
+    //genders
+    const genderList = ['MALE','FEMALE','TRANSGENDER'];
+
 
     //event handling
     const handleOnChange=(event)=>{
@@ -66,7 +70,7 @@ function SavingsAccount(props) {
 
     return(
             <div>
-                <form onSubmit={handleSubmit} className="form">
+                <form onSubmit={handleSubmit} className="form border border-danger shadow-none p-3 rounded">
                     <Fieldset legend="Customer Form">
                     <span className="mt-5">
                         <label htmlFor="firstName">First Name</label>
@@ -111,7 +115,9 @@ function SavingsAccount(props) {
                     </span>
                     <span className="mt-5">
                         <label htmlFor="gender" className="form-label">Gender</label>
-                        <InputText name="gender" type="text" value={gender} onChange={handleOnChange} className="form-control"/>
+                       <Dropdown name="gender" value={gender}
+                                 options={genderList} onChange={handleOnChange}
+                                 placeholder="Select a Gender" className="form-select"/>
                         {errors.gender &&
                         <div style={{ color: "red", paddingBottom: 10 }}>
                             {errors.gender}</div>
