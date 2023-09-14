@@ -1,7 +1,7 @@
 import './App.css';
 import {Component} from "react";
 import LOGO from './Logo/Logo'
-
+import Menubar from './Menu/Menu'
 /*
 function BankApp() {
   return (
@@ -41,12 +41,17 @@ export class BankApp extends Component{
     render() {
         console.log("Entering  render");
         return(
-            <div className="App-header">
-                <LOGO/>
-                <h1 className="multicolortext">HSBC Bank</h1>
-                <h3>{this.state.currentTime.toLocaleTimeString()}</h3>
+            <section>
+                <header className="App-header">
+                    <LOGO/>
+                    <h1 className="multicolortext">HSBC Bank</h1>
+                    <h3>{this.state.currentTime.toLocaleTimeString()}</h3>
+                </header>
+                <section>
+                    <Menubar/>
+                </section>
+            </section>
 
-            </div>
         )
     }
     componentDidMount() {
