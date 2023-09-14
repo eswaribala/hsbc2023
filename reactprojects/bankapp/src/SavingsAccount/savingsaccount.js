@@ -70,7 +70,7 @@ function SavingsAccount(props) {
                     <Fieldset legend="Customer Form">
                     <span className="mt-5">
                         <label htmlFor="firstName">First Name</label>
-                        <InputText id="firstName" type="text" pattern="[a-zA-Z]*" value={firstName} onChange={handleOnChange}  className="form-control"/>
+                        <InputText name="firstName" type="text" pattern="[a-zA-Z]*" value={firstName} onChange={handleOnChange}  className="form-control"/>
                         {errors.firstName &&
                         <div style={{ color: "red", paddingBottom: 10 }}>
                             {errors.firstName}</div>
@@ -78,7 +78,7 @@ function SavingsAccount(props) {
                     </span>
                         <span className="mt-5">
                         <label htmlFor="lastName" className="form-label">Last Name</label>
-                        <InputText id="lastName" type="text" pattern="[a-zA-Z]*" value={lastName} onChange={handleOnChange} className="form-control"/>
+                        <InputText name="lastName" type="text" pattern="[a-zA-Z]*" value={lastName} onChange={handleOnChange} className="form-control"/>
                         {errors.lastName &&
                             <div style={{ color: "red", paddingBottom: 10 }}>
                                 {errors.lastName}</div>
@@ -86,23 +86,24 @@ function SavingsAccount(props) {
                     </span>
                         <span className="mt-5">
                         <label htmlFor="email" className="form-label">Email</label>
-                        <InputText id="email" type="email" value={email} onChange={handleOnChange} className="form-control"/>
+                        <InputText name="email" type="email" value={email} onChange={handleOnChange} className="form-control"/>
                         {errors.email &&
                         <div style={{ color: "red", paddingBottom: 10 }}>
                             {errors.email}</div>
                         }
                     </span>
-                    <span className="mt-5">
-                        <label htmlFor="dob" className="form-label">DOB</label>
-                       <Calendar value={dob} onSelect={handleOnChange} touchUI className="form-control"></Calendar>
-                    {errors.dob &&
-                    <div style={{ color: "red", paddingBottom: 10 }}>
-                        {errors.dob}</div>
-                    }
+                        <span className="mt-5">
+                         <label htmlFor="dob" className="form-label">DOB</label>
+                         <Calendar  name="dob" value={dob} className="w-100" onChange={handleOnChange} touchUI />
+
+                            {errors.dob &&
+                            <div style={{ color: "red", paddingBottom: 10 }}>
+                                {errors.dob}</div>
+                            }
                     </span>
                     <span className="mt-5">
                          <label htmlFor="contactNo" className="form-label">Contact No</label>
-                        <InputText id="contactNo" type="number" value={contactNo} onChange={handleOnChange} className="form-control"/>
+                        <InputText name="contactNo" type="number" value={contactNo} onChange={handleOnChange} className="form-control"/>
                         {errors.contactNo &&
                         <div style={{ color: "red", paddingBottom: 10 }}>
                             {errors.contactNo}</div>
@@ -110,7 +111,7 @@ function SavingsAccount(props) {
                     </span>
                     <span className="mt-5">
                         <label htmlFor="gender" className="form-label">Gender</label>
-                        <InputText id="gender" type="text" value={gender} onChange={handleOnChange} className="form-control"/>
+                        <InputText name="gender" type="text" value={gender} onChange={handleOnChange} className="form-control"/>
                         {errors.gender &&
                         <div style={{ color: "red", paddingBottom: 10 }}>
                             {errors.gender}</div>
@@ -118,7 +119,7 @@ function SavingsAccount(props) {
                     </span>
                         <span className="mt-5">
                           <label htmlFor="address" className="form-label">Address</label>
-                         <InputTextarea id="address" rows={5} cols={30} value={address}
+                         <InputTextarea name="address" rows={5} cols={30} value={address}
                                       autoResize  onChange={handleOnChange} className="form-control"/>
                         {errors.address &&
                         <div style={{ color: "red", paddingBottom: 10 }}>
