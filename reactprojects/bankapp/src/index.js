@@ -6,7 +6,8 @@ import reportWebVitals from './reportWebVitals';
 import "primereact/resources/themes/vela-purple/theme.css";  //theme
 import "primereact/resources/primereact.min.css";                  //core css
 import "primeicons/primeicons.css";
-
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/js/bootstrap'
 const root = ReactDOM.createRoot(document.getElementById('bank-root'));
 root.render(
   <React.StrictMode>

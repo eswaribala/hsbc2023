@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import {InputText} from 'primereact/inputtext'
 import { Fieldset } from 'primereact/fieldset';
 import { InputTextarea } from 'primereact/inputtextarea';
+import './savingsaccount.css'
 //functional approach
 //React Hook 16.8
 function SavingsAccount(props) {
@@ -30,37 +31,37 @@ function SavingsAccount(props) {
 
     return(
             <div>
-                <form>
+                <form className="form">
                     <Fieldset legend="Customer Form">
-                    <span className="p-float-label">
-                        <InputText id="in" value={firstName}/>
+                    <span className="mt-5">
+                        <InputText id="in" value={firstName}  className="form-control"/>
                         <label htmlFor="in">First Name</label>
                     </span>
-                        <span className="p-float-label">
-                        <InputText id="in" value={lastName}/>
-                        <label htmlFor="in">Last Name</label>
+                        <span className="mt-5">
+                        <InputText id="in" value={lastName} className="form-control"/>
+                        <label htmlFor="in" className="form-label">Last Name</label>
                     </span>
-                        <span className="p-float-label">
-                        <InputText id="in" value={email}/>
-                        <label htmlFor="in">Email</label>
+                        <span className="mt-5">
+                        <InputText id="in" value={email} className="form-control"/>
+                        <label htmlFor="in" className="form-label">Email</label>
                     </span>
-                    <span className="p-float-label">
-                        <InputText id="in" value={dob}/>
-                        <label htmlFor="in">DOB</label>
+                    <span className="mt-5">
+                        <InputText id="in" value={dob} className="form-control"/>
+                        <label htmlFor="in" className="form-label">DOB</label>
                     </span>
-                        <span className="p-float-label">
-                        <InputText id="in" value={contactNo}/>
-                        <label htmlFor="in">Contact No</label>
+                        <span className="mt-5">
+                        <InputText id="in" value={contactNo} className="form-control"/>
+                        <label htmlFor="in" className="form-label">Contact No</label>
                     </span>
-                    <span className="p-float-label">
-                        <InputText id="in" value={gender}/>
-                        <label htmlFor="in">Gender</label>
+                    <span className="mt-5">
+                        <InputText id="in" value={gender} className="form-control"/>
+                        <label htmlFor="in" className="form-label">Gender</label>
                     </span>
-                        <span className="p-float-label">
+                        <span className="mt-5">
                          <InputTextarea id="in" rows={5} cols={30} value={address}
-                                      autoResize />
+                                      autoResize  className="form-control"/>
 
-                        <label htmlFor="in">Address</label>
+                        <label htmlFor="in" className="form-label">Address</label>
                     </span>
                     </Fieldset>
                 </form>
