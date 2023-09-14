@@ -3,6 +3,7 @@ import {InputText} from 'primereact/inputtext'
 import { Fieldset } from 'primereact/fieldset';
 import { InputTextarea } from 'primereact/inputtextarea';
 import { Button } from 'primereact/button';
+import { Calendar } from 'primereact/calendar';
 import './savingsaccount.css'
 //functional approach
 //React Hook 16.8
@@ -41,18 +42,19 @@ function SavingsAccount(props) {
         const name=event.target.name;
         const value=event.target.value;
         setInputs(values=>({...values,[name]:value}))
-        if((inputs.firstName.length>0)
-            &&(inputs.lastName.length>5)
-            &&(inputs.email.length>0)
+        if((inputs.firstName!=null)
+            &&(inputs.lastName!=null)
+            &&(inputs.email!=null)
             &&(inputs.contactNo>0)
-            &&(inputs.gender.length>0)
-            &&(inputs.address.length>5)
+            &&(inputs.gender!=null)
+            &&(inputs.address!=null)
         )
             setIsAddDisabled(true);
     }
 
     const handleSubmit=(event)=>{
 
+        console.log(inputs);
     }
 
 
@@ -64,7 +66,7 @@ function SavingsAccount(props) {
 
     return(
             <div>
-                <form className="form">
+                <form onSubmit={handleSubmit} className="form">
                     <Fieldset legend="Customer Form">
                     <span className="mt-5">
                         <label htmlFor="firstName">First Name</label>
@@ -92,7 +94,7 @@ function SavingsAccount(props) {
                     </span>
                     <span className="mt-5">
                         <label htmlFor="dob" className="form-label">DOB</label>
-                        <InputText id="dob" type="date" required value={dob} onChange={handleOnChange} className="form-control"/>
+                       <Calendar value={dob} onSelect={handleOnChange} touchUI className="form-control"></Calendar>
                     {errors.dob &&
                     <div style={{ color: "red", paddingBottom: 10 }}>
                         {errors.dob}</div>
