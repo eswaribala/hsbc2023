@@ -32,9 +32,18 @@ function SavingsAccount(props) {
         email:"",
         contactNo:0
     });
+    const [isAddDisabled, setIsAddDisabled] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
 
     //event handling
+    const handleOnChange=(event)=>{
+
+        const name=event.target.name;
+        const value=event.target.value;
+
+    }
+
     const handleSubmit=(event)=>{
 
     }
@@ -87,7 +96,7 @@ function SavingsAccount(props) {
                     </span>
                        <span className="mt-5">
                          <Button label="Submit" className="mt-3 form-control p-button-rounded p-button-danger"
-                              />
+                            disabled={!isAddDisabled}  />
                         </span>
                     </Fieldset>
                 </form>
