@@ -34,34 +34,41 @@ function SavingsAccount(props) {
                 <form className="form">
                     <Fieldset legend="Customer Form">
                     <span className="mt-5">
-                        <InputText id="in" value={firstName}  className="form-control"/>
-                        <label htmlFor="in">First Name</label>
+                        <label htmlFor="firstName">First Name</label>
+                        <InputText id="firstName" value={firstName}  className="form-control"/>
+
                     </span>
                         <span className="mt-5">
-                        <InputText id="in" value={lastName} className="form-control"/>
-                        <label htmlFor="in" className="form-label">Last Name</label>
+                        <label htmlFor="lastName" className="form-label">Last Name</label>
+                        <InputText id="lastName" value={lastName} className="form-control"/>
+
                     </span>
                         <span className="mt-5">
-                        <InputText id="in" value={email} className="form-control"/>
-                        <label htmlFor="in" className="form-label">Email</label>
+                        <label htmlFor="email" className="form-label">Email</label>
+                        <InputText id="email" value={email} className="form-control"/>
+
                     </span>
                     <span className="mt-5">
-                        <InputText id="in" value={dob} className="form-control"/>
-                        <label htmlFor="in" className="form-label">DOB</label>
-                    </span>
-                        <span className="mt-5">
-                        <InputText id="in" value={contactNo} className="form-control"/>
-                        <label htmlFor="in" className="form-label">Contact No</label>
+                        <label htmlFor="dob" className="form-label">DOB</label>
+                        <InputText id="dob" value={dob} className="form-control"/>
+
                     </span>
                     <span className="mt-5">
-                        <InputText id="in" value={gender} className="form-control"/>
-                        <label htmlFor="in" className="form-label">Gender</label>
+                         <label htmlFor="contactNo" className="form-label">Contact No</label>
+                        <InputText id="contactNo" value={contactNo} className="form-control"/>
+
+                    </span>
+                    <span className="mt-5">
+                        <label htmlFor="gender" className="form-label">Gender</label>
+                        <InputText id="gender" value={gender} className="form-control"/>
+
                     </span>
                         <span className="mt-5">
-                         <InputTextarea id="in" rows={5} cols={30} value={address}
+                          <label htmlFor="address" className="form-label">Address</label>
+                         <InputTextarea id="address" rows={5} cols={30} value={address}
                                       autoResize  className="form-control"/>
 
-                        <label htmlFor="in" className="form-label">Address</label>
+
                     </span>
                     </Fieldset>
                 </form>
