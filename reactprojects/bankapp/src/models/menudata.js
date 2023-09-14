@@ -170,7 +170,7 @@ export const items=[
 
     },
     {
-        label: 'Online Banking',
+        label: 'Online',
         icon: 'pi pi-fw pi-money-bill',
         items:[{
 

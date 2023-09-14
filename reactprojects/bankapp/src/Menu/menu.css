@@ -1,20 +1,28 @@
 .menu{
     width:80%;
     margin-left: 8%;
-    background-color: orangered;
+    background-color: black;
     margin-top: 2%;
 
 }
 .p-menubar{
-    background-color: orangered;
-    color: #77170a;
+    width:90%;
+    margin-left:10%;
+    background-color: black;
+    color: red;
 }
 .p-menuitem {
     font-size: x-large;
     width:100%;
+    background-color: red;
+
+    color: black;
 }
 .p-menuitem-active a {
-    background: orangered !important;
+    width:100%;
+
+    background: black !important;
+    color: red;
 
 }
 

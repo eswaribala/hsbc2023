@@ -1,9 +1,12 @@
 import React from "react";
 import {Menubar} from "primereact/menubar";
 import {items} from "../models/menudata";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import {Routes} from "react-router";
 import './menu.css'
 //stateless component
 const menubar=()=>(
+ <Router>
   <div className="menu">
       <Menubar model={items}   pt={{
           action: ({ props, state, context }) => ({
@@ -13,6 +16,8 @@ const menubar=()=>(
 
       </Menubar>
   </div>
+
+ </Router>
 );
 
 export default menubar;
