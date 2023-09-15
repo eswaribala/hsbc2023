@@ -7,9 +7,9 @@ function LoanAgainstProperty(props){
                     <Accordion activeIndex={0}>
                         <AccordionTab header="Mortgage">
                             <p className="m-0">
-                                <h3>props?.firstName</h3>
-                                <h3>props?.lastName</h3>
-                                <h3>props?.dob</h3>
+                                <h3>{props?.item.firstName}</h3>
+                                <h3>{props?.item.lastName}</h3>
+                                <h3>{props?.item.dob}</h3>
                              </p>
                         </AccordionTab>
                         <AccordionTab header="Home Loan">

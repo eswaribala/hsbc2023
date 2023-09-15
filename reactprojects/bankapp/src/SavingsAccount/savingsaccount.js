@@ -37,6 +37,7 @@ function SavingsAccount(props) {
     const [country, setCountry] = useState( propsCountry,"");
     const [address, setAddress] = useState( propsAddress,"");
     const [inputs, setInputs]= useState({});
+    const [args, setArgs]= useState({});
     const [errors, setErrors] = useState({
         firstName: "",
         lastName: "",
@@ -108,8 +109,10 @@ function SavingsAccount(props) {
             inputs.dob=convertedDate;
             axios.post(restAPIUrl, inputs).then(res => {
                 console.log(res);
+                setArgs(inputs);
                 clearFields(event);
                 setIsSubmitting(true);
+
             }).catch(error => {
                 throw(error);
             });
@@ -126,7 +129,7 @@ function SavingsAccount(props) {
 
 return(
 
- <div>
+ <div className="layout">
      <div className="card" hidden={!isSubmitting} >
          <Messages ref={msgs} />
      </div>
@@ -206,7 +209,7 @@ return(
          </Fieldset>
      </form>
      <div>
-         <LoanAgainstProperty input={inputs}/>
+         <LoanAgainstProperty item={args}/>
      </div>
 
 
