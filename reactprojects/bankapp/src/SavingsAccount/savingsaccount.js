@@ -133,6 +133,7 @@ return(
      <div className="card" hidden={!isSubmitting} >
          <Messages ref={msgs} />
      </div>
+     <div>
      <form onSubmit={handleSubmit} className="form border border-danger shadow-none p-3 rounded">
          <Fieldset legend="Customer Form">
          <span className="mt-5">
@@ -208,7 +209,8 @@ return(
              </span>
          </Fieldset>
      </form>
-     <div>
+     </div>
+     <div className="comp">
          <LoanAgainstProperty item={args}/>
      </div>
 

@@ -3,7 +3,7 @@ import { Accordion, AccordionTab } from 'primereact/accordion';
 
 function LoanAgainstProperty(props){
         return(
-              <div className="card">
+              <div className="loanlayout">
                     <Accordion activeIndex={0}>
                         <AccordionTab header="Mortgage">
                             <p className="m-0">
