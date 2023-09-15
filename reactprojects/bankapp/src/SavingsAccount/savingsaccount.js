@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useRef, useState} from "react";
 import {InputText} from 'primereact/inputtext'
 import { Fieldset } from 'primereact/fieldset';
 import { InputTextarea } from 'primereact/inputtextarea';
@@ -8,6 +8,9 @@ import { Dropdown } from 'primereact/dropdown';
 import './savingsaccount.css'
 import {validate} from "./validator";
 import axios from "axios";
+import { Messages } from 'primereact/messages';
+import {useMountEffect} from "primereact/hooks";
+
 
 let restAPIUrl="http://localhost:7070/customers/v1.0/"
 
@@ -44,7 +47,14 @@ function SavingsAccount(props) {
 
     //genders
     const genderList = ['MALE','FEMALE','TRANSGENDER'];
+    const msgs = useRef(null);
 
+    useMountEffect(() => {
+        msgs.current.show([
+            { sticky: true, severity: 'success', summary: 'Success', detail: 'Closable Message'},
+            { sticky: true, severity: 'info', summary: 'Info', detail: 'Not Closable Message', closable: false}
+        ]);
+    });
 
     //event handling
     const handleOnChange=(event)=>{
@@ -60,7 +70,12 @@ function SavingsAccount(props) {
         )
             setIsAddDisabled(true);
     }
-
+    function clearFields(event) {
+        // we have to convert event.target to array
+        // we use from method to convert event.target to array
+        // after that we will use forEach function to go through every input to clear it
+        Array.from(event.target).forEach((e) => (e.value = ""));
+    }
     const handleSubmit=(event)=>{
         event.preventDefault();
         console.log(inputs);
@@ -70,24 +85,16 @@ function SavingsAccount(props) {
         let isValid=response.status;
         if(isValid) {
             setIsAddDisabled(false);
-           // inputs.dob = inputs.dob.toLocaleDateString('en-ZA');
-            let convertedDate = inputs.dob.getFullYear()
-                + "-" +((inputs.dob.getMonth()+1).length != 2 ? "0" +
-                    (inputs.dob.getMonth() + 1) : (inputs.dob.getMonth()+1))
-                + "-" + (inputs.dob.getDate().length != 2 ?"0" +
-                    inputs.dob.getDate() : inputs.dob.getDate());
+            const year = inputs.dob.getFullYear();
+            const month = String(inputs.dob.getMonth() + 1).padStart(2, '0');
+            const day = String(inputs.dob.getDate()).padStart(2, '0');
+            const convertedDate = `${year}-${month}-${day}`;
 
-           // let convertedDate= inputs.dob.getFullYear()+"-"+inputs.dob.getMonth()+"-"+inputs.dob.getDay();
             inputs.dob=convertedDate;
             axios.post(restAPIUrl, inputs).then(res => {
                 console.log(res);
-                setFirstName("")
-                setLastName("")
-                setDOB("")
-                setAddress("")
-                setContactNo(0)
-                setGender("")
-                setEmail("")
+                clearFields(event);
+                setIsSubmitting(true);
             }).catch(error => {
                 throw(error);
             });
@@ -104,6 +111,9 @@ function SavingsAccount(props) {
 
 return(
  <div>
+     <div className="card" hidden={!isSubmitting} >
+         <Messages ref={msgs} />
+     </div>
      <form onSubmit={handleSubmit} className="form border border-danger shadow-none p-3 rounded">
          <Fieldset legend="Customer Form">
          <span className="mt-5">
