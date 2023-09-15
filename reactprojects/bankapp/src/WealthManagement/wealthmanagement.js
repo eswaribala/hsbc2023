@@ -1,12 +1,27 @@
-import {Component} from "react";
+import {Component, useEffect, useState} from "react";
+import {fetchCountries} from "../SavingsAccount/fetchcountries";
+import { useContext, createContext } from "react";
+import WealthDashboard from "../WealthDashboard/wealthdashboard";
 
-export class WealthManagement extends Component{
+export const CountryContext = createContext("Unknown");
 
-    render() {
+function WealthManagement({ children }){
+
+    const [countries,setCountries]=[]=useState(["India","Nepal"]);
+    useEffect(() => {
+        fetchCountries().then(res=>{
+            setCountries(res.data);
+        })
+    },[]);
+
         return(
             <div>
                 <h1>Wealth Management</h1>
+            <CountryContext.Provider value={{countries,setCountries}}>
+              <WealthDashboard/>
+            </CountryContext.Provider>
             </div>
         )
-    }
+
 }
+export default WealthManagement;

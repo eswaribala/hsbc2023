@@ -19,8 +19,8 @@ import './menu.css'
 import {CardFeatures} from "../CardFeatures/cardfeatures";
 import {DebitCard} from "../DebitCard/debitcard";
 import LoanAgainstProperty from "../LoanAgainstProperty/loanagainstproperty";
-import {WealthManagement} from "../WealthManagement/wealthmanagement";
-import {WealthDashboard} from "../WealthDashboard/wealthdashboard";
+import WealthManagement from "../WealthManagement/wealthmanagement";
+import WealthDashboard from "../WealthDashboard/wealthdashboard";
 import {Insights} from "../Insights/insights";
 
 

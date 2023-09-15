@@ -1,12 +1,19 @@
-import {Component} from "react";
+import {Component, useContext} from "react";
+import {CountryContext} from "../WealthManagement/wealthmanagement";
 
-export class WealthDashboard extends Component{
 
-    render() {
+
+function WealthDashboard(){
+
+    const {countries,setCountries} = useContext(CountryContext);
+    console.log(countries);
         return(
             <div>
                 <h1>Wealth Dashboard</h1>
+
             </div>
         )
-    }
+
 }
+
+export default WealthDashboard;
