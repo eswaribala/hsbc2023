@@ -10,9 +10,11 @@ import {validate} from "./validator";
 import axios from "axios";
 import { Messages } from 'primereact/messages';
 import {useMountEffect} from "primereact/hooks";
+import {fetchCountries} from "./fetchcountries";
 
 
 let restAPIUrl="http://localhost:7070/customers/v1.0/"
+
 
 //functional approach
 //React Hook 16.8
@@ -21,7 +23,7 @@ function SavingsAccount(props) {
     //destructured object
     const{firstName:propsFirstName, lastName:propsLastName,
     email:propsEmail,dob:propsDOB, contactNo:propsContactNo,
-     gender:propsGender,address:propsAddress}=props;
+     gender:propsGender,address:propsAddress,country:propsCountry}=props;
 
     //create the state for the object
 
@@ -31,6 +33,7 @@ function SavingsAccount(props) {
     const [dob, setDOB] = useState( propsDOB,"");
     const [contactNo, setContactNo] = useState( propsContactNo,0);
     const [gender, setGender] = useState( propsGender,"");
+    const [country, setCountry] = useState( propsCountry,"");
     const [address, setAddress] = useState( propsAddress,"");
     const [inputs, setInputs]= useState({});
     const [errors, setErrors] = useState({
@@ -47,13 +50,22 @@ function SavingsAccount(props) {
 
     //genders
     const genderList = ['MALE','FEMALE','TRANSGENDER'];
+    const [countries,setCountries]=[]=useState([]);
+     fetchCountries().then(res=>{
+         setCountries(res.data);
+     })
+
+    let countryArray=[];
+     countries.forEach(x=>{
+         countryArray.push(x.name);
+     })
+
     const msgs = useRef(null);
 
     useMountEffect(() => {
         msgs.current.show([
             { sticky: true, severity: 'success', summary: 'Success', detail: 'Closable Message'},
-            { sticky: true, severity: 'info', summary: 'Info', detail: 'Not Closable Message', closable: false}
-        ]);
+                 ]);
     });
 
     //event handling
@@ -110,6 +122,7 @@ function SavingsAccount(props) {
 
 
 return(
+
  <div>
      <div className="card" hidden={!isSubmitting} >
          <Messages ref={msgs} />
@@ -157,6 +170,11 @@ return(
              <div style={{ color: "red", paddingBottom: 10 }}>
                  {errors.contactNo}</div>
              }
+         </span>
+         <span className="mt-5">
+             <label htmlFor="country" className="form-label">Country</label>
+            <Dropdown name="country" value={country} options={countryArray}  placeholder="Select a Gender" className="form-select"/>
+
          </span>
          <span className="mt-5">
              <label htmlFor="gender" className="form-label">Gender</label>
