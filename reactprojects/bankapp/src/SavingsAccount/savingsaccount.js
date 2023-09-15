@@ -1,4 +1,4 @@
-import React, {useRef, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import {InputText} from 'primereact/inputtext'
 import { Fieldset } from 'primereact/fieldset';
 import { InputTextarea } from 'primereact/inputtextarea';
@@ -11,7 +11,7 @@ import axios from "axios";
 import { Messages } from 'primereact/messages';
 import {useMountEffect} from "primereact/hooks";
 import {fetchCountries} from "./fetchcountries";
-
+import { Accordion, AccordionTab } from 'primereact/accordion';
 
 let restAPIUrl="http://localhost:7070/customers/v1.0/"
 
@@ -49,14 +49,16 @@ function SavingsAccount(props) {
     const [isSubmitting, setIsSubmitting] = useState(false);
 
     //genders
-    const genderList = ['MALE','FEMALE','TRANSGENDER'];
+    const genderList = [{name:'MALE',code:'M'},{name:'FEMALE',code:'F'},
+        {name:'TRANSGENDER',code:'T'}];
     const [countries,setCountries]=[]=useState([]);
+    useEffect(() => {
      fetchCountries().then(res=>{
          setCountries(res.data);
      })
-
+    },[]);
     let countryArray=[];
-     countries.forEach(x=>{
+     countries?.forEach(x=>{
          countryArray.push(x.name);
      })
 
@@ -122,7 +124,6 @@ function SavingsAccount(props) {
 
 
 return(
-
  <div>
      <div className="card" hidden={!isSubmitting} >
          <Messages ref={msgs} />
@@ -178,9 +179,10 @@ return(
          </span>
          <span className="mt-5">
              <label htmlFor="gender" className="form-label">Gender</label>
-            <Dropdown name="gender" value={gender}
-                      options={genderList} onChange={handleOnChange}
-                      placeholder="Select a Gender" className="form-select"/>
+            <Dropdown name="gender" value={gender} style={{color:"red"}}
+                      options={genderList} onChange={handleOnChange}  optionValue="name"
+                      optionLabel="name"
+                      className="form-select"/>
              {errors.gender &&
              <div style={{ color: "red", paddingBottom: 10 }}>
                  {errors.gender}</div>
@@ -202,6 +204,7 @@ return(
          </Fieldset>
      </form>
  </div>
+
 )
 
 }

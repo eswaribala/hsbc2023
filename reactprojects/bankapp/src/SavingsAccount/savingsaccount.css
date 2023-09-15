@@ -14,3 +14,14 @@
 }
 
 
+.dropdown-demo .p-dropdown {
+    width: 14rem;
+    background-color: orangered;
+}
+
+.dropdown-demo .country-item-value img.flag {
+    width: 17px;
+}
+
+
+
