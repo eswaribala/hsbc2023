@@ -12,6 +12,7 @@ import { Messages } from 'primereact/messages';
 import {useMountEffect} from "primereact/hooks";
 import {fetchCountries} from "./fetchcountries";
 import { Accordion, AccordionTab } from 'primereact/accordion';
+import LoanAgainstProperty from "../LoanAgainstProperty/loanagainstproperty";
 
 let restAPIUrl="http://localhost:7070/customers/v1.0/"
 
@@ -124,6 +125,7 @@ function SavingsAccount(props) {
 
 
 return(
+
  <div>
      <div className="card" hidden={!isSubmitting} >
          <Messages ref={msgs} />
@@ -203,6 +205,11 @@ return(
              </span>
          </Fieldset>
      </form>
+     <div>
+         <LoanAgainstProperty input={inputs}/>
+     </div>
+
+
  </div>
 
 )
