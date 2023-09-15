@@ -6,6 +6,7 @@ import { Button } from 'primereact/button';
 import { Calendar } from 'primereact/calendar';
 import { Dropdown } from 'primereact/dropdown';
 import './savingsaccount.css'
+import {validate} from "./validator";
 //functional approach
 //React Hook 16.8
 function SavingsAccount(props) {
@@ -57,8 +58,13 @@ function SavingsAccount(props) {
     }
 
     const handleSubmit=(event)=>{
-
+        event.preventDefault();
         console.log(inputs);
+        let response= validate(inputs)
+        setErrors(response.errorsValue);
+        console.log(errors);
+        let isValid=response.status;
+
     }
 
 
@@ -98,7 +104,8 @@ function SavingsAccount(props) {
                     </span>
                         <span className="mt-5">
                          <label htmlFor="dob" className="form-label">DOB</label>
-                         <Calendar  name="dob" value={dob} className="w-100" onChange={handleOnChange} touchUI />
+                         <Calendar  name="dob" value={dob} className="w-100" onChange={handleOnChange}
+                                    dateFormat="yy/mm/dd"  touchUI />
 
                             {errors.dob &&
                             <div style={{ color: "red", paddingBottom: 10 }}>
